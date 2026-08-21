@@ -1,56 +1,66 @@
 # Shivam Singh - AI and Cloud Technical Program Management
 
-I lead complex AI and cloud programs by turning ambiguity into clear decisions, accountable workstreams, and dependable delivery. This portfolio shows how I approach cross-functional execution, regulated environments, operational recovery, launch readiness, and executive communication.
-
 ## Profile
 
-- I welcome conversations at [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu).
-- I share my broader professional background on [LinkedIn](https://www.linkedin.com/in/beastofbayarea).
+Hi, I’m Shivam. I’m at my best when a program has real technical complexity, several organizations around the table, and no obvious path from strategy to launch. I help teams turn that ambiguity into decisions, owners, milestones, and a delivery system people can trust.
 
-## What I focus on
+You can reach me at [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu). My wider professional history is on [LinkedIn](https://www.linkedin.com/in/beastofbayarea).
 
-- I translate strategy into executable programs with clear owners, milestones, and decision rights.
-- I coordinate AI, cloud, security, compliance, and business teams around shared outcomes.
-- I make risks, assumptions, issues, and dependencies visible early enough to change the result.
-- I build launch, escalation, and recovery mechanisms that support confident executive decisions.
+## What working with me looks like
+
+I make the plan concrete enough to expose disagreements early. That means defining outcomes, decision rights, interfaces, risks, assumptions, issues, dependencies, and escalation paths before they become status-report surprises.
+
+I also pay close attention to the human side of program leadership. A good cadence should make it easier for engineers, product leaders, security teams, legal partners, and executives to tell the truth, resolve trade-offs, and keep moving.
 
 ## Resume
 
-- I use the [PDF resume](./shivam-singh-ai-tpm.pdf) as the primary version for reading and sharing.
-- I provide an [editable, ATS-friendly DOCX](./shivam-singh-ai-tpm-ats-autofill.docx) for application workflows.
+You can read or share my [PDF resume](./shivam-singh-ai-tpm.pdf). For systems that need an editable document, I’ve included an [ATS-friendly DOCX](./shivam-singh-ai-tpm-ats-autofill.docx).
 
-## Project portfolio
+## Program walkthroughs
 
-I organize these projects by career experience, with the most recent first. In each case study, I explain how I would define the program, align stakeholders, manage dependencies and risk, sequence delivery, and measure operational value. I ground the analysis in the independent methodology and market sources linked inside each file.
+I’ve grouped these walkthroughs by career experience in reverse chronological order. Each one is written as a detailed first-person explanation of how I would establish control, lead the cross-functional work, and judge whether the program is ready to move forward. The source lists inside the files provide the external evidence behind the approach.
 
 ### Amazon Web Services (AWS)
 
 **Principal Technical Program Manager, Sovereign Cloud** | July 2024 - Present
 
-- I use [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) to show how I would coordinate a resilient launch across interconnected commerce systems, failure modes, recovery paths, and measurable service objectives.
+#### [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md)
+
+A checkout journey can look simple to the customer while depending on a long chain of services. I map that chain, identify the most consequential failure modes, and build a launch program around service objectives, recovery paths, exercises, and clear ownership.
 
 ### Rakuten Group, Inc.
 
 **Technical Program Manager, Marketplace Strategy & AI Programs - MBA Intern** | June 2023 - December 2023
 
-- I use [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) to show how I would build a work-back plan, govern dependencies, stage merchant adoption, and make launch readiness visible across product, data, legal, and operations.
+#### [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md)
+
+This is the kind of launch where product progress alone is not enough. I show how I would connect product, data, legal, sales, and operations through a work-back plan, dependency reviews, staged merchant adoption, and an evidence-based readiness decision.
 
 ### Microsoft Corporation
 
 **Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
 
-- I use [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) to show how I would stabilize an incident, restore shared accountability, and redesign partner governance around evidence, escalation, and prevention.
+#### [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md)
+
+When an incident crosses company boundaries, unclear accountability slows both recovery and learning. I work through stabilization first, then redesign the partnership around shared evidence, escalation rules, corrective actions, and prevention.
 
 ### The D. E. Shaw Group
 
 **Vice President, Technical Program Management - Real-Time Risk** | July 2016 - December 2019
 
-- I use [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) to show how I would recover a time-critical program through dependency triage, daily decision cadence, controlled scope, and outcome-based milestones.
-- I use [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) to show how I would connect capacity forecasting, hardware lifecycle decisions, reliability, and financial discipline across a global compute estate.
+#### [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md)
+
+A short recovery window forces honest prioritization. I explain how I would triage dependencies, narrow scope without losing the outcome, create a daily decision cadence, and move the program through measurable recovery milestones.
+
+#### [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md)
+
+Capacity, reliability, and cost are different views of the same fleet decision. I bring them together through demand forecasting, lifecycle governance, replacement priorities, and a planning rhythm that can work across regions.
 
 ### McKinsey & Company
 
 **Engagement Associate, Transformation Program Delivery** | July 2014 - June 2016
 
-- I use [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) to show how I would sequence data modernization, regional governance, regulatory dependencies, and market launch across a multi-country transformation.
+#### [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md)
+
+A multi-country launch is a portfolio of linked decisions, not one milestone. I sequence data modernization, regulatory work, regional governance, operational readiness, and market launch so that leaders can see where progress is real and where it is exposed.
 
