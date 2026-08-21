@@ -1,76 +1,59 @@
 # A 21-day recovery of the trading-data platform
 
-I led the recovery of a real-time trading-data program at D. E. Shaw. I saw that traders could not rely on the data path and engineers could not protect the time needed to repair it. I worked with traders, quantitative researchers, data and platform engineers, infrastructure teams, risk and control partners, finance, and senior technology leaders.
+The primary path processed about 1.2 million events per minute against a stated need of 2.5 million. Resource failures and restarts were recurring, latency deteriorated during market stress, and trading teams had built shadow tools because confidence in the platform had collapsed.
 
-## Day zero: redefine success as promotion authority
+At D. E. Shaw, I led the 21-day recovery across traders, quantitative researchers, data/platform engineering, infrastructure, risk, controls, finance, and senior technology leadership. My job was not to make Spark jobs appear green; it was to transfer decision authority back to the primary path using evidence both traders and engineers accepted.
 
-The platform had a Spark Streaming path that processed about 1.2 million events per minute against a stated need of 2.5 million. It suffered recurring resource failures and restarts, latency degraded during market stress, and teams had created shadow tooling because confidence in the primary path had broken down.
+## Day zero: define who could declare recovery
 
-I refused to define recovery as “the jobs are running.” The platform would regain authority only after it passed five independent gates:
+I established five independent promotion gates:
 
-For 21 days, I controlled the transfer of authority back to the primary platform: secure emergency capacity, protect engineering time, join system telemetry to trading consequence, enforce data-integrity quarantine and replay, run shadow comparison, and obtain joint trader-and-platform approval. The recovered path had to more than double throughput to 2.5 million events per minute without making a larger cluster or a single latency number the definition of trust.
+1. **Scale:** sustain 2.5 million events per minute with headroom.
+2. **Speed:** meet a fixed event-to-decision latency boundary and percentile.
+3. **Integrity:** prove completeness, schema validity, ordering, duplicate handling, quarantine, and replay.
+4. **Trading usefulness:** reproduce eligible signals and fills within agreed tolerance.
+5. **Operability:** survive worker, driver, and dependency faults with accountable recovery.
 
-1. **Scale:** sustain the required input rate with capacity headroom.
-2. **Speed:** meet the latency boundary for the decision path, with percentile and timestamp definitions fixed.
-3. **Integrity:** prove completeness, schema validity, ordering assumptions, and duplicate handling.
-4. **Trading usefulness:** produce the same eligible signals and fills as the reference path within an agreed tolerance.
-5. **Operability:** survive worker, driver, and dependency faults with clear ownership and an audited recovery path.
+The temporary shadow stream remained read-only and non-authoritative. It provided continuity and comparison, not a second production truth.
 
-The temporary shadow stream stayed read-only and non-authoritative. It was a comparator and continuity measure, not a second production truth.
+## Hours 0–72: join technical symptoms to economic consequence
 
-## The battle rhythm
+I replaced fragmented reporting with a 15-minute daily decision meeting and one Grafana view overlaying event flow, delay, saturation, restarts, market activity, signals, fills, and changes. A trader could identify a harmed interval and an engineer could trace the same interval through the data path.
 
-### First 72 hours — make the failure observable
+Every blocker left with one disposition: fix now, run a bounded experiment, or escalate a capacity/priority decision. I protected four-hour engineering blocks from meetings because incident management that consumed the repair team would extend the incident.
 
-I replaced fragmented updates with a daily 15-minute decision meeting and a shared Grafana view. The dashboard overlaid event flow, processing delay, resource saturation and restarts with market activity, trading signals, fill behavior, and system changes. That let a trader point to economic harm and an engineer trace the same interval through the data path.
+## Days 4–10: create headroom, then prove it was real
 
-Each blocker left the meeting with one owner and one of three dispositions: fix now, run a bounded experiment, or escalate a capacity/priority decision. I protected four-hour engineering blocks from meetings and ad hoc requests because a recovery cadence that consumed the repair team would have been self-defeating.
+I secured “300% more compute” within 24 hours. The phrase is ambiguous—it may mean 3× total or a 300% increase to 4×—so I retain it without inventing node count.
 
-### Days 4–10 — create headroom and remove repeat failure
+Engineering rebalanced partitions and executors, tuned memory and backpressure, isolated unstable workloads, and removed restart triggers. Capacity was not an exit condition: a larger cluster could move the bottleneck or hide a leak. Sustained load had to show stable resource curves, bounded queues, and controlled errors.
 
-The source says I secured “300% more compute” within 24 hours. That phrase is ambiguous: it could mean four times the original capacity after a 300% increase, or three times the original capacity. I retain the source wording and do not invent the resulting node count.
+## Days 11–17: make data integrity executable
 
-Engineering rebalanced partitions and executors, tuned memory and backpressure, isolated unstable workloads, and addressed restart triggers. Capacity alone was not an exit condition. A larger cluster can move a bottleneck downstream or hide a leak until the next stress event, so I required resource curves and error behavior under sustained load.
+For each batch, the platform compared expected and observed counts, schema, time range, key fields, and cryptographic hashes where identical representation made hashing meaningful. Suspect data entered quarantine. Replay and reconciliation proved whether recovery reproduced the same logical result.
 
-### Days 11–17 — make data integrity executable
+The [Spark Streaming programming guide](https://spark.apache.org/docs/latest/streaming-programming-guide.html) distinguishes fault tolerance for input, transformations, and output; output is at-least-once unless the sink is idempotent or transactional. I therefore did not allow “Spark replayed it” to become an unsupported end-to-end exactly-once claim.
 
-For each batch, the team compared expected and observed counts, schema, time range, key fields, and cryptographic hashes where identical representations made hashing meaningful. Suspect data went to quarantine instead of silently entering the decision path. Replay and reconciliation showed whether a recovery reproduced the same logical result.
+## Days 18–21: shadow, compare, transfer authority
 
-This distinction matters with Spark Streaming. The official [Spark Streaming programming guide](https://spark.apache.org/docs/latest/streaming-programming-guide.html) explains that input, transformation, and output have separate fault-tolerance semantics; output is at-least-once by default unless the sink is idempotent or transactional. I therefore would not claim end-to-end exactly-once processing merely because the engine replayed an input.
+The recovered path processed the same market periods as the reference without making decisions. Teams compared throughput, latency distribution, integrity exceptions, signal differences, fill eligibility, restarts, and operator intervention.
 
-### Days 18–21 — shadow, compare, and transfer authority
+Traders and platform owners jointly approved promotion. Workaround retirement was a separate controlled change so recovery did not create a new cutover incident.
 
-The recovered path processed the same market periods as the authoritative reference without making trading decisions. We examined throughput, delay distribution, data exceptions, signal differences, fill eligibility, restarts, and operator interventions. Traders and platform owners jointly signed the promotion evidence; retirement of temporary workarounds was a separate controlled step.
+## The recovery record
 
-## The recovered scorecard
+- **Throughput:** 1.2M → 2.5M events/minute target → 2.5M achieved. Method: accepted events in consistent one-minute windows under representative load. Result: +1.3M, +108.3%, 2.083× baseline.
+- **Latency:** >2 ms baseline → fixed decision-path target → 1.5 ms observed. A separate “70% below crisis peak” statement implies ~5 ms, but that peak and timestamp boundary are not retained. I report the achieved value, not a fabricated baseline reduction.
+- **Fill rate:** 94% → restore decision usefulness → 99.8%. Method: completed eligible fills / eligible opportunities in the comparison window. Result: +5.8 points, ~6.2% relative.
+- **Availability:** baseline unstable → controlled recovery → 99.99% reading. Observation window absent, so it is not presented as annual uptime or an SLA.
+- **Authority transfer:** platform untrusted → pass five gates → jointly promoted in 21 days.
 
-The records support the following statements, with important measurement limits:
+## Economics remained in three separate accounts
 
-- **Throughput:** 1.2 million to 2.5 million events per minute, an increase of 1.3 million, 108.3% above baseline, or 2.083 times the original rate. Measurement: accepted events over a one-minute window under the retained load profile.
-- **Latency:** more than 2 milliseconds in the baseline record and 1.5 milliseconds after recovery. A separate statement calls this a 70% reduction from a crisis peak, which mathematically implies roughly 5 milliseconds; that peak and timestamp boundary are not retained. I therefore report the 1.5-millisecond observed value, not a defensible baseline-to-result percentage. I also do not imply that this was Spark micro-batch completion time; the record must establish which event-to-decision boundary it measured.
-- **Fill rate:** 94% to 99.8%, a 5.8-percentage-point improvement and about 6.2% relative. Measurement: completed eligible fills divided by eligible order opportunities in the comparison window.
-- **Availability:** 99.99% after recovery. The observation window is absent, so this is not presented as annual uptime or an SLA result.
-- **Recovery time:** the core promotion gates closed in 21 days, measured from the intervention start to joint approval of the recovered path.
+The recovered quarter is associated with approximately $4 million of profit. Trading P&L also depends on market opportunity, models, risk, and execution, so I present this as performance during the recovered period—not profit caused solely by the platform program.
 
-## Economic interpretation without causal overreach
+The source also models ~$2.5 million of annual slippage savings and ~$1.5 million of avoided downtime loss. The first needs volume, price benchmark, counterfactual, and persistence; the second needs outage probability and loss-rate assumptions. Neither is booked value, and neither is added to the $4 million.
 
-The record associates the market window with approximately $4 million of quarterly profit. Trading P&L depends on market opportunity, model behavior, risk allocation, execution, and the data platform; I present the figure as performance during the recovered period, not profit caused solely by my program.
+I owned promotion gates, incident cadence, protected engineering time, capacity escalation, cross-functional evidence, financial classification, and transfer to normal governance. Engineers owned implementation; traders defined the economically meaningful boundary; infrastructure owned capacity; risk/control owned exceptions; finance owned value definitions.
 
-Two other figures are decision models rather than booked results:
-
-- about $2.5 million of annual slippage savings, which would require a documented counterfactual, eligible volume, price benchmark, and persistence period; and
-- roughly $1.5 million of potential downtime loss avoided, which requires an outage probability and loss-rate assumption.
-
-I kept reported P&L, estimated savings, and modeled avoided loss in different finance lines. Combining them would double count value and falsely upgrade forecasts into realized benefit.
-
-## What changed beyond the emergency
-
-My role was to rebuild the authority system around the technology. Traders defined the economically meaningful boundary. Engineers owned implementation and operational health. Infrastructure leaders owned capacity. Risk and control partners owned evidence and exceptions. Finance owned value classification. I owned the gates, decision cadence, resource escalation, cross-functional evidence, and transfer back to normal governance.
-
-The durable outcome was not speed in isolation. The organization gained a way to decide whether a real-time data path was safe to trust: one view connecting system behavior to trading consequence, executable integrity controls, explicit fault semantics, and joint promotion authority.
-
-## Reconstruction sources
-
-- The retained project record supplies the platform, schedule, throughput, latency, fill, availability, capacity, and financial figures.
-- [Apache Spark: Spark Streaming Programming Guide](https://spark.apache.org/docs/latest/streaming-programming-guide.html) — primary technical reference for DStreams, recovery, input semantics, and output guarantees.
-- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — external reference for monitoring symptoms, causes, latency, traffic, errors, and saturation.
+The durable result was institutional, not merely technical. The firm gained a repeatable way to decide when a real-time data path deserved trust: system telemetry connected to trading consequence, integrity controls that executed rather than documented intent, explicit fault semantics, and joint authority to promote or reject the platform.

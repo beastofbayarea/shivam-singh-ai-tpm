@@ -1,72 +1,64 @@
 # Making sustainable shopping trustworthy without putting payment at risk
 
-I led a commerce reliability and sustainability program during my AWS role. I had identified that shoppers could not trust broad environmental claims and could not complete payment reliably when optional product data slowed checkout. I worked with shoppers, retail and payments teams, sustainability specialists, certifiers, platform and site-reliability engineers, vendors, support, finance, and executive owners.
+The program contained two promises that had been coupled incorrectly.
 
-## The product decision hidden inside the reliability problem
+A sustainability claim had to be specific, current, and understandable. Payment had to complete even when optional product enrichment failed. When an external carbon-data dependency slowed under viral demand, those promises collided: waiting checkout threads exhausted the service and put the transaction itself at risk.
 
-The team was trying to improve two different customer promises at once. The first was epistemic: if the storefront described a product as sustainable, the claim needed a specific basis that a shopper could understand. The second was transactional: no enrichment service, however useful, should be able to stop a customer from paying.
+During my AWS role, I led the cross-functional commerce program across shoppers, retail and payments teams, sustainability specialists, certifiers, platform and reliability engineers, vendors, support, finance, and executives.
 
-I treated those promises differently. Certification status, claim provenance, price, and delivery information shaped the shopping decision; payment authorization, inventory reservation, and order creation formed the non-negotiable transaction path. That distinction changed the program from a catalogue feature with an uptime target into a critical-path redesign with a separately governed trust layer.
+## The baseline exposed both product and platform failure
 
-The initial evidence was uncomfortable:
+A 10,000-shopper survey found 58% concerned about greenwashing and 45% citing price as a barrier. Sustainable-category conversion had fallen from 2.8% historically to 1.9%. Mobile represented 60% of traffic but converted 22% below desktop. Overall checkout latency was 1.5 seconds, mobile was 4.2 seconds, and cart abandonment had risen from 25% to 45%.
 
-- a survey of 10,000 shoppers found 58% were concerned that sustainability claims could be greenwashing and 45% saw price as a barrier;
-- sustainable-category conversion had fallen from a historical 2.8% to 1.9%;
-- mobile represented 60% of traffic but converted 22% below desktop;
-- overall checkout latency was 1.5 seconds, while mobile checkout took 4.2 seconds; and
-- cart abandonment had moved from 25% to 45%.
+I kept those as separate measures. Claim trust, page performance, transaction completion, category conversion, and commercial value had different owners and denominators.
 
-I would not allow those numbers to collapse into one success metric. Claim trust, page performance, payment completion, conversion, and commercial value each had a different owner and measurement method.
+At roughly 1,600 orders per second, the coupled design contributed to 45 minutes of failure and an estimated $3 million in lost orders. My mandate became both immediate and structural: contain the event, repair customers and vendor accountability, remove optional data from the critical path, prove regional resilience, and rebuild the sustainability evidence contract.
 
-I ran both halves of a high-stakes program: the evidence system behind environmental claims and the transaction architecture protecting checkout at roughly 1,600 orders per second. When the coupled design contributed to 45 minutes of failure and an estimated $3 million in lost orders, I directed containment, customer remedy, vendor recovery, critical-path isolation, regional resilience, and the release proof required to restore full traffic.
+## Incident command
 
-## How I changed the system
+Viral demand and a DNS/TTL plus cache-miss pattern concentrated calls on the external service. Dependency latency rose from about 200 milliseconds to more than five seconds. Checkout threads waited, 504s followed, and transaction failure reached 15%.
 
-I convened product, sustainability, legal, engineering, operations, and external certifiers to replace generic labels with claim-level evidence. Each eligible product needed a named standard or certificate, a current verification state, and shopper-facing language tied to that evidence. The [FTC Green Guides](https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides) informed the discipline: broad environmental claims require qualification and substantiation rather than optimistic copy.
+I separated containment from correction.
 
-For the transaction path, I made graceful degradation the default. Sustainability enrichment could improve a product page or order record, but its failure could not consume checkout threads indefinitely. The design used:
+**Containment:** route 75% of traffic to the legacy path. Transaction failure fell from 15% to 2%.
 
-- explicit timeouts and a circuit breaker that opened when more than 5% of requests exceeded 500 milliseconds;
-- cached or last-known-good enrichment where the use was safe, and omission where stale evidence would mislead;
-- cell isolation and shuffle sharding so one noisy dependency or customer cohort could not exhaust the whole service;
-- active-active service capacity in Virginia and Oregon; and
-- independent telemetry for customer latency, dependency latency, transaction failures, cache behavior, and circuit state.
+**Customer repair:** issue $10 credits to affected customers and give support a plain-language incident narrative.
 
-This architecture follows the current [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html): turn appropriate hard dependencies into soft ones, fail fast, bound queues and retries, isolate faults, and use tested recovery mechanisms. I use it here as an external technical benchmark, not as proof of what the internal implementation contained beyond the retained project record.
+**Vendor accountability:** negotiate $100,000 in fee relief. That remedy did not reverse the customer harm.
 
-## The incident that forced a clearer contract
+**Structural correction:** remove synchronous sustainability enrichment from payment authorization, inventory reservation, and order creation.
 
-During viral demand of roughly 1,600 orders per second, a DNS/TTL and cache-miss pattern pushed calls toward an external carbon-data service. Its response time rose from about 200 milliseconds to more than five seconds. Waiting requests exhausted checkout threads; 504 errors followed; transaction failure reached 15% for 45 minutes. The incident record estimated roughly $3 million in lost orders.
+## The new dependency contract
 
-I ran containment and correction as two distinct jobs. The team routed 75% of traffic to the legacy path, which reduced transaction failure from 15% to 2%. We then removed synchronous enrichment from the payment-critical path, added the circuit breaker and isolation controls, and exercised region and dependency failures before restoring full traffic. The circuit subsequently activated 14 times without another recorded outage, evidence that degradation had become a controlled state rather than an improvised response.
+Environmental evidence could enhance the shopping decision or enrich an order record, but it could not own payment availability.
 
-I also led the non-technical repair. Affected customers received $10 credits, support received a plain-language incident narrative, and the vendor discussion produced $100,000 in fee relief. Those remedies did not erase customer harm; they made accountability visible while the engineering work addressed recurrence.
+The redesigned path used explicit timeouts and a circuit breaker that opened when more than 5% of requests exceeded 500 milliseconds; last-known-good evidence only where staleness was safe; omission where stale status could mislead; cell isolation and shuffle sharding; active-active capacity in Virginia and Oregon; and separate telemetry for customer latency, dependency latency, failures, cache behavior, and circuit state.
 
-## What changed, and exactly how I would defend it
+The breaker later activated 14 times without another recorded outage. That was meaningful operational evidence: degraded behavior had become designed and repeatable.
 
-| Measure | Baseline | Program intent | Observed result | Measurement and boundary |
-|---|---:|---:|---:|---|
-| Mobile checkout latency | 4.2 s | sub-second | 800 ms | client-side checkout timing; 3.4 s and 81% reduction |
-| Mobile conversion | 0.8% | reverse the mobile gap | 1.0% | completed orders / eligible mobile sessions; +0.2 percentage points, +25% relative |
-| Sustainable-category conversion | 1.9% | recover toward 2.8% historical level | 2.2% | completed orders / eligible category sessions; +0.3 points, +15.8% relative, still 0.6 points below history |
-| Cart abandonment | 45% | restore the prior direction | 30% | initiated carts without completed order; -15 points, -33.3% relative, still 5 points above the earlier 25% level |
-| Incident transaction failure | 15% | rapid containment | 2% after diversion | failed transactions / attempts during the incident window; -13 points |
+The [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) provides an external benchmark for soft dependencies, fail-fast behavior, bounded queues/retries, isolation, and tested recovery. The [Amazon Builders’ Library FAQ](https://aws.amazon.com/builders-library/faqs/) identifies shuffle sharding as an Amazon fault-isolation practice.
 
-The project record also reports 99.999% availability after the redesign, but it does not retain the observation window. I therefore present it only as a post-remediation reading, not annual availability: 45 minutes of downtime alone would make a one-year figure no better than about 99.9914%, while 99.999% across a year permits only about 5.3 minutes.
+## The sustainability claim contract
 
-Similarly, the record says the seasonal program later offset approximately $3 million of commercial shortfall. I do not call those orders “recovered.” A failed purchase cannot be assumed to return; later sales can offset an accounting gap without reversing the original customer loss.
+I convened sustainability, product, legal, engineering, and certifiers to replace broad labels with claim-level evidence. Every eligible product required a named standard or certificate, current verification state, evidence owner, and shopper-facing language tied to that proof.
 
-## Why this was a program, not an incident fix
+The [FTC Green Guides summary](https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides) informed the discipline that broad environmental claims need qualification and substantiation. It did not certify the individual claims.
 
-My lasting contribution was the decision system around the service. Sustainability specialists owned evidence quality. Product owned the customer proposition. Payments engineering owned the transaction path. Site reliability owned failure-mode tests and operational thresholds. Finance kept incident loss, vendor remedies, and later seasonal sales in separate ledgers. I owned the cross-team contract: which data could affect payment, who could stop a release, how degraded behavior should look, and what evidence was required to declare recovery.
+This made trust operational: a claim could expire or disappear without affecting checkout, and no cached label could remain visible if its evidence was unsafe to reuse.
 
-That combination made the work strategically larger than a latency improvement. It connected a differentiated retail proposition to claim substantiation, protected the revenue path from optional services, and gave executives a measurement model that did not disguise partial recovery as full success.
+## Result ledger
 
-## Evidence used to reconstruct the work
+| Customer or business outcome | Baseline → target → recorded result | Method |
+|---|---|---|
+| Mobile checkout latency | 4.2 s → sub-second → 800 ms | Client-observed checkout boundary; 3.4 s and 81% lower |
+| Mobile conversion | 0.8% → close mobile gap → 1.0% | Orders / eligible mobile sessions; +0.2 points, +25% relative |
+| Sustainable-category conversion | 1.9% → recover toward 2.8% history → 2.2% | Orders / eligible category sessions; +0.3 points, +15.8% relative, still 0.6 points below history |
+| Cart abandonment | 45% → recover toward 25% history → 30% | Started carts without orders; -15 points, -33.3% relative, still 5 points above history |
+| Incident failure | 15% → contain rapidly → 2% | Failed transactions / attempts in incident window; -13 points |
+| Dependency resilience | uncontrolled wait → bounded degradation → 14 breaker activations, no recorded outage | Circuit events joined to transaction health and post-event review |
 
-- The retained project record supplies the survey, latency, conversion, incident, remediation, and commercial figures above.
-- [FTC: Environmental Claims — Summary of the Green Guides](https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides) — external benchmark for qualified and substantiated environmental marketing claims.
-- [AWS Well-Architected Framework: Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) — current external benchmark for graceful degradation, bounded failure, observability, isolation, recovery, and resilience testing.
-- [Amazon Builders' Library FAQ](https://aws.amazon.com/builders-library/faqs/) — identifies shuffle sharding as an Amazon fault-isolation practice.
+A post-remediation 99.999% availability reading lacks an observation window. Forty-five minutes of downtime alone would cap one-year availability near 99.9914%, so I do not present 99.999% as an annual result. A later seasonal program reportedly offset ~$3 million of commercial shortfall; offset sales are not the same as recovering each failed order.
 
-The source labels this an “Amazon Sustainable Commerce” program, while this portfolio assigns it to my AWS tenure. I have therefore described it as a commerce program led during that role and have not claimed employment in an Amazon retail organization or attributed company-wide retail scale to my direct ownership.
+I owned the cross-team contract: which data could affect payment, incident sequencing, traffic restoration gates, customer and vendor remedies, evidence ownership, degradation behavior, and executive measurement. Sustainability specialists owned claim truth; product owned the proposition; payments engineering owned the critical path; reliability teams owned failure proof; finance kept loss, fee relief, and later sales in separate ledgers.
+
+The strategic outcome was a commerce system in which differentiation could fail safely. Environmental evidence became more credible precisely because it was governed separately from the transaction it was meant to improve.
