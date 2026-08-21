@@ -1,58 +1,56 @@
 # Shivam Singh - AI and Cloud Technical Program Management
 
-Role-targeted resume for leading complex AI, cloud, regulatory, and cross-functional programs from planning through launch.
+I lead complex AI and cloud programs by turning ambiguity into clear decisions, accountable workstreams, and dependable delivery. This portfolio shows how I approach cross-functional execution, regulated environments, operational recovery, launch readiness, and executive communication.
 
 ## Profile
 
-- Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
-- [LinkedIn](https://www.linkedin.com/in/beastofbayarea)
+- I welcome conversations at [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu).
+- I share my broader professional background on [LinkedIn](https://www.linkedin.com/in/beastofbayarea).
 
-## Resume formats
+## What I focus on
 
-- [View the PDF](./shivam-singh-ai-tpm.pdf)
-- [Download the ATS Autofill DOCX](./shivam-singh-ai-tpm-ats-autofill.docx)
+- I translate strategy into executable programs with clear owners, milestones, and decision rights.
+- I coordinate AI, cloud, security, compliance, and business teams around shared outcomes.
+- I make risks, assumptions, issues, and dependencies visible early enough to change the result.
+- I build launch, escalation, and recovery mechanisms that support confident executive decisions.
 
-Use the PDF for review and sharing. Use the DOCX for editable, ATS-friendly application workflows.
+## Resume
 
-## Focus areas
+- I use the [PDF resume](./shivam-singh-ai-tpm.pdf) as the primary version for reading and sharing.
+- I provide an [editable, ATS-friendly DOCX](./shivam-singh-ai-tpm-ats-autofill.docx) for application workflows.
 
-- Technical program and portfolio leadership
-- Generative AI and sovereign cloud delivery
-- Dependency, risk, and RAID governance
-- Launch readiness, compliance, and executive escalation
+## Project portfolio
 
-## Project interview stories
-
-I group these case studies by their primary resume experience in reverse chronological order. I write each project in first person, explain how I would frame and lead the work, and ground the analysis in the independent methodology and market sources linked within the file.
+I organize these projects by career experience, with the most recent first. In each case study, I explain how I would define the program, align stakeholders, manage dependencies and risk, sequence delivery, and measure operational value. I ground the analysis in the independent methodology and market sources linked inside each file.
 
 ### Amazon Web Services (AWS)
 
 **Principal Technical Program Manager, Sovereign Cloud** | July 2024 - Present
 
-- [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) - resilient launch execution across commerce systems
+- I use [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) to show how I would coordinate a resilient launch across interconnected commerce systems, failure modes, recovery paths, and measurable service objectives.
 
 ### Rakuten Group, Inc.
 
 **Technical Program Manager, Marketplace Strategy & AI Programs - MBA Intern** | June 2023 - December 2023
 
-- [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) - work-back planning, dependency governance, staged rollout, and launch readiness for merchant AI workflows
+- I use [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) to show how I would build a work-back plan, govern dependencies, stage merchant adoption, and make launch readiness visible across product, data, legal, and operations.
 
 ### Microsoft Corporation
 
 **Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
 
-- [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) - incident recovery and joint-accountability redesign
+- I use [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) to show how I would stabilize an incident, restore shared accountability, and redesign partner governance around evidence, escalation, and prevention.
 
 ### The D. E. Shaw Group
 
 **Vice President, Technical Program Management - Real-Time Risk** | July 2016 - December 2019
 
-- [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) - rapid program recovery, dependencies, and execution cadence
-- [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) - fleet planning, capacity governance, and lifecycle operations
+- I use [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) to show how I would recover a time-critical program through dependency triage, daily decision cadence, controlled scope, and outcome-based milestones.
+- I use [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) to show how I would connect capacity forecasting, hardware lifecycle decisions, reliability, and financial discipline across a global compute estate.
 
 ### McKinsey & Company
 
 **Engagement Associate, Transformation Program Delivery** | July 2014 - June 2016
 
-- [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) - data-platform modernization, regional governance, dependencies, and launch execution
+- I use [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) to show how I would sequence data modernization, regional governance, regulatory dependencies, and market launch across a multi-country transformation.
 
