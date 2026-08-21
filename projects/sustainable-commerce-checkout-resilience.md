@@ -1,56 +1,28 @@
-# Amazon Sustainable Commerce — Resilient Checkout & Category Growth
+# Sustainable Commerce - Checkout Resilience
 
-> **Portfolio lens:** Production incident leadership, resilient architecture, dependency classification, launch governance, and customer recovery.
+> **Document type:** Externally grounded interview case reconstruction, not a claim of an independently verified completed engagement.
+>
+> **Timeline alignment:** The [public AI Technical Program Management resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) is used only to place this case within the AWS role dated July 2024-present.
 
-## Executive snapshot
+## Evidence-grounded premise
 
-Combined checkout modernization with verified sustainable-category growth, then led correction after an external enrichment dependency triggered a peak outage. The redesign isolated payment from optional data, added active-active resilience and circuit breakers, and connected technical recovery to customer and commercial outcomes.
+AWS reliability guidance emphasizes failure isolation, graceful degradation, monitoring, tested recovery, and post-incident learning. The FTC Green Guides explain how environmental marketing claims should avoid deception and be properly qualified. These sources support a checkout that remains dependable while sustainable-product claims remain specific and substantiated.
 
-## Resume-ready impact
+## Case approach
 
-- Led correction of a peak checkout outage that caused a 15% transaction-failure rate and roughly $3M in lost revenue, restoring a legacy fallback to contain impact.
-- Redesigned payment as a mandatory path and sustainability data as optional enrichment, adding cell isolation, circuit breakers, and multi-region active-active capacity.
-- Reduced checkout latency from 1.5 seconds to 800 ms, achieved 99.999% availability, cut cart abandonment from 45% to 30%, and recovered the holiday shortfall.
+- Separate critical checkout dependencies from optional sustainability content and recommendations.
+- Degrade optional features safely without blocking payment or obscuring customer choices.
+- Link environmental claims to evidence, scope, qualifications, and accountable owners.
+- Test peak load, dependency failure, recovery, and claim display before launch.
 
-## Interview story
+## Evidence-based success measures
 
-### Situation
+Use checkout availability, error containment, recovery time, abandonment by failure mode, substantiation coverage, and claim-correction time. These are proposed measures, not historical results.
 
-Customers distrusted vague sustainability claims while mobile checkout was slow. During peak traffic, a DNS/TTL issue caused synchronous calls to an external enrichment service, exhausting threads and creating a 45-minute outage.
+## External source map
 
-### Task
-
-Protect payment completion, correct the architectural failure, restore customer trust, and preserve verified sustainability value without keeping it on the critical path.
-
-### Actions
-
-- Declared the outage and routed 75% of transactions to the stable legacy gateway, reducing failure from 15% to 2%.
-- Led a correction-of-error process that reclassified every dependency as mandatory, deferrable, or optional.
-- Implemented cell isolation, shuffle sharding, a 500 ms circuit threshold, and active-active regional capacity.
-- Tracked customer credits, vendor SLA recovery, sentiment, category conversion, and revenue restoration alongside technical remediation.
-
-### Results
-
-- Checkout latency reached 800 ms and availability reached 99.999%.
-- Cart abandonment fell from 45% to 30%, and mobile conversion rose from 0.8% to 1.0%.
-- Sustainable-category conversion improved from 1.9% to 2.2%.
-- The circuit breaker later activated 14 times without another outage, and the roughly $3M holiday shortfall was recovered.
-
-## Decisions and trade-offs
-
-- Restore a slower known-safe gateway before pursuing the permanent fix.
-- Remove optional sustainability data from the synchronous payment path.
-- Treat customer restitution and vendor economics as part of incident completion.
-
-## Leadership signal
-
-Coordinated platform, category, vendor, customer-service, and executive teams through containment, correction, architecture redesign, and measurable commercial recovery.
-
-## Skills and keywords
-
-production incident · technical program management · checkout resilience · active-active · circuit breaker · dependency classification · correction of error · customer recovery · launch governance · sustainability data
-
-## Source
-
-[Original Notion project page](https://app.notion.com/p/300f9e255f21805ea49df378ecc317b9)
-
+| Source | Contribution |
+|---|---|
+| [AWS - Well-Architected Reliability Pillar (2024)](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) | Primary reliability and failure-management methodology. |
+| [U.S. FTC - Green Guides](https://www.ftc.gov/legal-library/browse/rules/green-guides) | Primary environmental-marketing and claim-qualification guidance. |
+| [Public resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) | Work dates only. |

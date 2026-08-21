@@ -1,56 +1,28 @@
-# Global HPC Fleet — Lifecycle Cost & Reliability Optimization
+# Global HPC Fleet - Lifecycle Cost and Reliability Optimization
 
-> **Portfolio lens:** Infrastructure portfolio leadership, lifecycle governance, reliability engineering, capacity economics, and secure retirement.
+> **Document type:** Externally grounded interview case reconstruction, not a claim of an independently verified completed engagement.
+>
+> **Timeline alignment:** The [public AI Technical Program Management resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) is used only to place this case within the D. E. Shaw role dated July 2016-December 2019.
 
-## Executive snapshot
+## Evidence-grounded premise
 
-Created a closed-loop lifecycle control system for a global high-performance computing fleet. The program linked hardware telemetry and trading P&L to purchasing, deployment, tuning, relocation, retirement, and secure disposal decisions.
+Google's SRE guidance makes latency, traffic, errors, and saturation central monitoring signals. NIST SP 800-53 Revision 4 supplies configuration, contingency, maintenance, capacity, and audit controls. Combined, they support fleet decisions based on workload service objectives, failure behavior, lifecycle risk, and traceable change.
 
-## Resume-ready impact
+## Case approach
 
-- Reduced annual HPC operating cost $1.2M by joining technical telemetry, vendor billing, and profitable-execution evidence.
-- Removed 40 inactive servers, identified 15% of the fleet as over-provisioned, and relocated latency-insensitive workloads without reducing trading profit.
-- Introduced 10x stress tests and secure retirement controls, sustaining 99.999% uptime through a 400% market-data surge.
+- Segment workloads by performance, availability, data, and recovery requirements.
+- Track capacity, saturation, failure, repair, energy, and total lifecycle cost by cohort.
+- Replace or reconfigure assets according to risk-adjusted service impact rather than age alone.
+- Use canary changes, configuration control, recovery tests, and rollback for fleet-wide updates.
 
-## Interview story
+## Evidence-based success measures
 
-### Situation
+Use service-objective attainment, queue time, saturation, failure rate, recovery, change failure, utilization, and lifecycle cost. These are proposed measures, not historical results.
 
-Engineering optimized speed, Finance optimized invoices, and Operations reacted to failures without a shared model of lifecycle value. A 17-minute incident and later FPGA resale exposed both reliability and intellectual-property risk.
+## External source map
 
-### Task
-
-Manage the fleet as an economic and operational system from capital request through secure end-of-life.
-
-### Actions
-
-- Connected buffer depth, packet loss, topology, temperature, and latency to trade profitability and fully loaded cost.
-- Created functional, volume, thermal, reliability, and canary gates before rollout.
-- Rejected overclocking changes whose heat and instability outweighed a marginal latency gain.
-- Implemented cryptographic erasure, physical destruction where required, chain of custody, and finance-system closure.
-
-### Results
-
-- Annual OpEx fell $1.2M, including roughly $100K in immediate monthly savings.
-- Forty inactive servers were removed, and 15% of the fleet was identified as over-provisioned.
-- A London topology change reduced latency 400 nanoseconds.
-- The fleet sustained 99.999% uptime through a 400% volume surge.
-
-## Decisions and trade-offs
-
-- Evaluate economic utilization rather than raw CPU activity.
-- Reject faster configurations when reliability-adjusted value is negative.
-- Treat retirement as incomplete until technical, physical, and financial controls close.
-
-## Leadership signal
-
-Created a shared decision model for engineering, finance, operations, vendors, and security, turning infrastructure lifecycle work into an observable investment discipline.
-
-## Skills and keywords
-
-infrastructure program management · HPC · capacity planning · lifecycle management · reliability · FinOps · stress testing · vendor management · secure disposal · cost optimization
-
-## Source
-
-[Original Notion project page](https://app.notion.com/p/2eff9e255f2180a485c1dfaee2618310)
-
+| Source | Contribution |
+|---|---|
+| [Google SRE - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) | Primary monitoring and service-signal methodology. |
+| [NIST - SP 800-53 Revision 4 (2015)](https://csrc.nist.gov/pubs/sp/800/53/r4/upd1/final) | Primary configuration, maintenance, contingency, and audit-control framework. |
+| [Public resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) | Work dates only. |
