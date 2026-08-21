@@ -1,56 +1,28 @@
-# Cloud Partnership Recovery — Incident Response & Vendor Governance
+# Cloud Partnership Recovery - Incident Response and Vendor Governance
 
-> **Portfolio lens:** Incident management, vendor dependencies, SLA governance, portfolio communication, and executive escalation.
+> **Document type:** Externally grounded interview case reconstruction, not a claim of an independently verified completed engagement.
+>
+> **Timeline alignment:** The [public AI Technical Program Management resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) is used only to place this case within the Microsoft role dated January 2020-August 2022.
 
-## Executive snapshot
+## Evidence-grounded premise
 
-Recovered a $10M annual cloud relationship supporting 20 startups and roughly one million users. Technical stabilization and commercial accountability ran as parallel workstreams, supported by independent telemetry, impact-led prioritization, realistic load tests, and a permanent vendor scorecard.
+The Basel Committee's 2021 operational-resilience principles focus on the ability to withstand, adapt to, and recover from disruptions. Google's SRE guidance distinguishes actionable monitoring from noise and emphasizes user-visible signals. These sources support shared incident objectives, evidence, ownership, and learning across a cloud vendor partnership.
 
-## Resume-ready impact
+## Case approach
 
-- Led recovery across 20 startups after outages, delayed APIs, and weak provider reporting caused quantified financial and engagement harm.
-- Restored 99.9% uptime and delivered three blocked APIs within 30 days through a phased technical plan and realistic portfolio stress tests.
-- Renegotiated the cloud agreement by 15%, saving $1.5M annually, and replaced provider-authored reporting with independent performance governance.
+- Define the important service, impact tolerance, dependencies, and joint incident roles before failure.
+- Monitor latency, traffic, errors, saturation, and user-visible outcomes across organizational boundaries.
+- Use one incident commander, time-stamped decisions, safe mitigations, and explicit customer communications.
+- Convert the post-incident review into owned control, architecture, contract, and exercise changes.
 
-## Interview story
+## Evidence-based success measures
 
-### Situation
+Use detection time, containment time, recovery within tolerance, communication latency, recurrence, action closure, and exercise findings. These are proposed measures, not historical results.
 
-The portfolio relied on a vendor's summaries while load balancing, database capacity, autoscaling, and roadmap commitments deteriorated. One fintech lost $500K in two hours, and another company saw engagement fall 15%.
+## External source map
 
-### Task
-
-Restore critical services quickly while rebuilding the vendor operating model so performance failures had observable owners, dated commitments, and commercial consequences.
-
-### Actions
-
-- Created a cross-functional incident team and prioritized by customer loss, regulatory dependency, data integrity, and shared platform exposure.
-- Reconstructed an independent incident timeline from startup reports, service logs, configurations, and capacity metrics.
-- Phased load-balancer, autoscaling, database, API, redundancy, and anomaly-detection work with explicit exit evidence.
-- Escalated verified SLA breaches to provider executives and tied future review, remedies, and renewal to a shared scorecard.
-
-### Results
-
-- Operational uptime returned to 99.9%.
-- All three delayed APIs shipped within 30 days.
-- The contract concession saved $1.5M per year.
-- The relationship moved from trust-based summaries to observable service governance.
-
-## Decisions and trade-offs
-
-- Treat the failure as both an incident and a vendor-governance problem.
-- Test fixes against market spikes, flash sales, and streaming loads before closure.
-- Tie commercial remedies to independently verified performance.
-
-## Leadership signal
-
-Kept startup teams informed through concise daily and weekly updates while coordinating engineers, security specialists, vendor executives, and portfolio leadership around one recovery plan.
-
-## Skills and keywords
-
-incident response · vendor governance · SLA · technical program management · cloud reliability · executive escalation · dependency management · portfolio communication · service review · cost savings
-
-## Source
-
-[Original Notion project page](https://app.notion.com/p/15bf9e255f2180b49a3cf3e612ba5f7d)
-
+| Source | Contribution |
+|---|---|
+| [Basel Committee - Principles for operational resilience (2021)](https://www.bis.org/bcbs/publ/d516.pdf) | Primary operational-resilience and recovery framework. |
+| [Google SRE - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) | Primary monitoring and actionable-alert methodology. |
+| [Public resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) | Work dates only. |

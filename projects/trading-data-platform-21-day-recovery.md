@@ -1,56 +1,28 @@
-# Trading Data Platform — 21-Day Real-Time Recovery
+# Trading Data Platform - Real-Time Recovery
 
-> **Portfolio lens:** Incident delivery, shared telemetry, launch gates, cross-functional recovery, and performance governance.
+> **Document type:** Externally grounded interview case reconstruction, not a claim of an independently verified completed engagement.
+>
+> **Timeline alignment:** The [public AI Technical Program Management resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) is used only to place this case within the D. E. Shaw role dated July 2016-December 2019.
 
-## Executive snapshot
+## Evidence-grounded premise
 
-Led a 21-day recovery of a failing real-time data platform supporting automated trading. A daily decision cadence, shared telemetry, protected engineering time, capacity changes, executable integrity checks, and shadow validation restored both system performance and stakeholder trust.
+BCBS 239 requires timely, accurate, complete, and adaptable risk-data aggregation. The original Kafka paper describes a distributed log architecture for high-throughput data feeds. These sources support recovery around data contracts, lineage, replay, reconciliation, and decision-critical service levels rather than a superficial interface fix.
 
-## Resume-ready impact
+## Case approach
 
-- Recovered a Spark Streaming platform in 21 days, meeting a 2.5M-events-per-minute requirement and reaching 1.5 ms latency.
-- Raised order fill rate from 94% to 99.8% and sustained 99.99% uptime through shared telemetry, capacity remediation, and controlled cutover.
-- Captured $4M in immediate quarterly profit and an estimated $2.5M in annual slippage savings.
+- Identify decision-critical feeds, owners, schemas, timeliness thresholds, and reconciliation rules.
+- Use an append-only event log and replayable consumers to isolate failures and rebuild state.
+- Compare source, stream, and downstream positions continuously and quarantine unexplained differences.
+- Restore in risk order with parallel validation and an explicit cutover/rollback decision.
 
-## Interview story
+## Evidence-based success measures
 
-### Situation
+Use data timeliness, completeness, reconciliation breaks, replay success, recovery time, consumer lag, and repeat incidents. These are proposed measures, not historical results.
 
-Throughput stalled at 1.2M events per minute, latency exceeded two milliseconds, and recurring failures pushed traders toward shadow workflows. Trading, Engineering, and Compliance used different evidence and definitions of success.
+## External source map
 
-### Task
-
-Restore performance inside a fixed market window without risking capital or weakening data-integrity controls.
-
-### Actions
-
-- Established a 15-minute daily war room focused on shipped work, blockers, and decisions.
-- Built live dashboards for flow, tail latency, resources, and order fill rate.
-- Secured 300% more compute capacity, protected engineering deep-work blocks, and converted compliance requirements into cryptographic batch checks.
-- Mirrored live traffic through a non-authoritative shadow stream and promoted only after throughput, latency, integrity, reliability, and audit gates passed.
-
-### Results
-
-- The 2.5M-events-per-minute requirement was met.
-- Latency reached 1.5 ms, order fill reached 99.8%, and uptime reached 99.99%.
-- The team hit the market window and captured $4M in quarterly profit.
-- Estimated annual slippage savings reached $2.5M.
-
-## Decisions and trade-offs
-
-- Replace narrative status with one evidence plane.
-- Increase speed through faster decisions and automated proof, not compressed governance.
-- Use shadow mode to de-risk technical and organizational cutover.
-
-## Leadership signal
-
-Rebuilt trust among traders, engineers, compliance, and executives by making outcome-level telemetry the shared program language.
-
-## Skills and keywords
-
-incident management · technical program management · Spark Streaming · war room · shared telemetry · shadow validation · release gates · capacity planning · compliance · low latency
-
-## Source
-
-[Original Notion project page](https://app.notion.com/p/15bf9e255f2180b6b913f715959a041f)
-
+| Source | Contribution |
+|---|---|
+| [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) | Primary risk-data quality, aggregation, governance, and reporting principles. |
+| [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) | Primary distributed-log and streaming architecture. |
+| [Public resume](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf) | Work dates only. |

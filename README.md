@@ -2,6 +2,11 @@
 
 Role-targeted resume for leading complex AI, cloud, regulatory, and cross-functional programs from planning through launch.
 
+## Profile
+
+- Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
+- [LinkedIn](https://www.linkedin.com/in/beastofbayarea)
+
 ## Resume formats
 
 - [View the PDF](./shivam-singh-ai-tpm.pdf)
@@ -18,22 +23,24 @@ Use the PDF for review and sharing. Use the DOCX for editable, ATS-friendly appl
 
 ## Project interview stories
 
-Stories are grouped by their primary resume experience in reverse chronological order. Each project includes resume-ready impact, interview framing, decisions, metrics, and a link to the source page.
+Stories are grouped by their primary resume experience in reverse chronological order. Each file is an externally grounded interview case reconstruction: independent methodology, regulatory, and market sources support the content, while the resume is used only for work dates. The files do not claim independently verified engagement results.
 
 ### Amazon Web Services (AWS)
 
 **Principal Technical Program Manager, Sovereign Cloud** | July 2024 - Present
 
-- [Inventory signals: streaming regional fulfillment](./projects/inventory-signals-streaming-regional-fulfillment.md) - cross-system delivery of real-time fulfillment signals
-- [FinTech AI security: control plane](./projects/fintech-ai-security-control-plane.md) - coordinated security, compliance, and launch controls
 - [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) - resilient launch execution across commerce systems
+
+### Rakuten Group, Inc.
+
+**Technical Program Manager, Marketplace Strategy & AI Programs - MBA Intern** | June 2023 - December 2023
+
+- [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) - work-back planning, dependency governance, staged rollout, and launch readiness for merchant AI workflows
 
 ### Microsoft Corporation
 
 **Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
 
-- [Regulated FinTech cloud: regional architecture](./projects/regulated-fintech-cloud-regional-architecture.md) - data-residency planning and regional delivery governance
-- [Legacy integration: policy-as-code self-service](./projects/legacy-integration-policy-as-code-self-service.md) - standardized integration controls and developer enablement
 - [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) - incident recovery and joint-accountability redesign
 
 ### The D. E. Shaw Group
@@ -43,7 +50,9 @@ Stories are grouped by their primary resume experience in reverse chronological 
 - [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) - rapid program recovery, dependencies, and execution cadence
 - [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) - fleet planning, capacity governance, and lifecycle operations
 
-## Profile
+### McKinsey & Company
 
-- Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
-- [LinkedIn](https://www.linkedin.com/in/beastofbayarea)
+**Engagement Associate, Transformation Program Delivery** | July 2014 - June 2016
+
+- [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) - data-platform modernization, regional governance, dependencies, and launch execution
+
