@@ -33,7 +33,6 @@ Stories are grouped by their primary resume experience in reverse chronological 
 **Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
 
 - [Regulated FinTech cloud: regional architecture](./projects/regulated-fintech-cloud-regional-architecture.md) - data-residency planning and regional delivery governance
-- [Legacy integration: policy-as-code self-service](./projects/legacy-integration-policy-as-code-self-service.md) - standardized integration controls and developer enablement
 - [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) - incident recovery and joint-accountability redesign
 
 ### The D. E. Shaw Group
