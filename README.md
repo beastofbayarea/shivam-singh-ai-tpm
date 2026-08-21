@@ -14,7 +14,7 @@ I also pay close attention to the human side of program leadership. A good caden
 
 ## Program walkthroughs
 
-I’ve grouped these walkthroughs by career experience in reverse chronological order. Each one explains how I established control, led the cross-functional work, and judged whether the program was ready to move forward. The source lists inside the files ground the approach in external evidence.
+I’ve grouped these walkthroughs by career experience in reverse chronological order. Each is reconstructed independently around its own product, stakeholders, technical constraints, evidence, and decisions. The source notes inside the files distinguish retained project evidence, external benchmarks, later company developments, estimates, and unresolved discrepancies.
 
 ### Amazon Web Services (AWS)
 
@@ -22,7 +22,7 @@ I’ve grouped these walkthroughs by career experience in reverse chronological 
 
 #### [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md)
 
-I combined checkout modernization with verified sustainable-category growth, then led correction after an external enrichment dependency triggered a peak outage. The redesign isolated payment from optional data, added active-active resilience and circuit breakers, and connected technical recovery to customer and commercial outcomes.
+I separated two customer promises that had been dangerously coupled: trustworthy sustainability evidence and reliable payment. After an optional enrichment service helped trigger a peak outage, I led containment and a critical-path redesign, while keeping incident loss, customer remedies, later seasonal sales, and partial conversion recovery analytically distinct. The source calls this an Amazon Sustainable Commerce program; the walkthrough explains why I describe it as commerce work during my AWS role without claiming Amazon retail employment.
 
 ### Rakuten Group, Inc.
 
@@ -30,7 +30,7 @@ I combined checkout modernization with verified sustainable-category growth, the
 
 #### [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md)
 
-I led this cross-functional launch work during my [Rakuten Group experience from June 2023 to December 2023](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf). I coordinated the product experience, data, evaluation, privacy, security, merchant enablement, support, and operating work needed to move Rakuten AI for Business from a broad platform ambition toward a controlled launch.
+I converted an invitation-only AI platform announcement into a controlled-launch decision system across product, data, evaluation, privacy, security, legal, business, enablement, and support. The walkthrough quantifies the public product surface and measurement design while deliberately making no unsupported adoption, accuracy, productivity, revenue, or later merchant-launch claim.
 
 ### Microsoft Corporation
 
@@ -38,7 +38,7 @@ I led this cross-functional launch work during my [Rakuten Group experience from
 
 #### [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md)
 
-I recovered a $10M annual cloud relationship supporting 20 startups and roughly one million users. Technical stabilization and commercial accountability ran as parallel workstreams, supported by independent telemetry, impact-led prioritization, realistic load tests, and a permanent vendor scorecard.
+I recovered governance of a $10M annual cloud relationship spanning 20 startups and roughly one million users. I ran service health, delivery commitments, and commercial remedies as separate ledgers, so one startup’s estimated loss, another’s engagement decline, delayed APIs, availability readings, and a contract concession were never blended into an exaggerated portfolio result.
 
 ### The D. E. Shaw Group
 
@@ -46,11 +46,11 @@ I recovered a $10M annual cloud relationship supporting 20 startups and roughly 
 
 #### [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md)
 
-I led a 21-day recovery of a failing real-time data platform supporting automated trading. A daily decision cadence, shared telemetry, protected engineering time, capacity changes, executable integrity checks, and shadow validation restored both system performance and stakeholder trust.
+I led a 21-day recovery of a failing real-time trading-data path, using five promotion gates to determine when it could regain authority. The account distinguishes stream-processing semantics from downstream latency, reports ambiguous capacity wording as ambiguous, and separates market-window P&L from estimated slippage savings and modeled avoided loss.
 
 #### [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md)
 
-I created a closed-loop lifecycle control system for a global high-performance computing fleet. The program linked hardware telemetry and trading P&L to purchasing, deployment, tuning, relocation, retirement, and secure disposal decisions.
+I created a closed-loop lifecycle control system for a global high-performance computing fleet, connecting trading demand, physical topology, stress evidence, economics, and custody from forecast through disposal. A March 2020 surge in the inherited source occurred after my December 2019 departure and is explicitly excluded from my personal outcomes.
 
 ### McKinsey & Company
 
@@ -58,4 +58,4 @@ I created a closed-loop lifecycle control system for a global high-performance c
 
 #### [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md)
 
-I structured and delivered a two-year transformation supporting a $1.1B APAC opportunity. A governed analytics platform became the decision system for a hub-and-spoke market-entry program, with explicit workstream ownership, regional decision rights, compliance gates, and localized GTM execution.
+I structured a hub-and-spoke decision system for a two-year transformation supporting a stated $1.1B APAC opportunity. The account preserves a material 4%-versus-8% conversion-baseline conflict and removes Redshift Spectrum and RA3 from the architecture because both launched after my engagement ended.
