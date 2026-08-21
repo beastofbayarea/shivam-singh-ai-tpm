@@ -1,58 +1,55 @@
-# Global HPC Fleet — Lifecycle Cost & Reliability Optimization
+# Managing a Global HPC Fleet as an Investment System
 
-## What I worked on
+I built this lifecycle program during my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I completed this work during my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+A high-performance computing fleet can look efficient from one vantage point and wasteful from another. Engineering sees latency and headroom. Finance sees invoices and depreciation. Operations sees incidents. Security sees asset and intellectual-property risk. I wanted one model that could follow an asset from purchase through deployment, tuning, relocation, and secure retirement—and show whether it still created economic value.
 
-I created a closed-loop lifecycle control system for a global high-performance computing fleet. The program linked hardware telemetry and trading P&L to purchasing, deployment, tuning, relocation, retirement, and secure disposal decisions.
+## The signals did not agree
 
-## At a glance
+Raw utilization was a poor proxy for usefulness. Some machines appeared lightly used while supporting high-value, latency-sensitive activity. Others consumed power and support without contributing to profitable execution. A 17-minute incident made the reliability cost visible, while the later appearance of an FPGA in a resale channel exposed the risk of treating disposal as a logistics task.
 
-- I reduced annual HPC operating cost $1.2M by joining technical telemetry, vendor billing, and profitable-execution evidence.
-- I removed 40 inactive servers, identified 15% of the fleet as over-provisioned, and relocated latency-insensitive workloads without reducing trading profit.
-- I introduced 10x stress tests and secure retirement controls, sustaining 99.999% uptime through a 400% market-data surge.
+I therefore connected five kinds of evidence:
 
-## The situation
+- network behavior, including packet loss, buffer depth, topology, and latency;
+- hardware behavior, including temperature and stability;
+- workload criticality and location sensitivity;
+- vendor, power, and support cost; and
+- contribution to profitable trading execution.
 
-Engineering optimized speed, Finance optimized invoices, and Operations reacted to failures without a shared model of lifecycle value. A 17-minute incident and later FPGA resale exposed both reliability and intellectual-property risk.
+That changed the discussion from “Is the server busy?” to “Is this configuration producing sufficient reliability-adjusted value?”
 
-## What I needed to accomplish
+## I gave every lifecycle decision a gate
 
-I needed to manage the fleet as an economic and operational system from capital request through secure end-of-life.
+For new or changed configurations, I introduced functional, volume, thermal, reliability, and canary checks. Google SRE's treatment of user-facing signals influenced the telemetry model, while NIST SP 800-53 informed the control structure around configuration, maintenance, contingency, and auditability.
 
-## What I did
+I used those gates to reject overclocking changes when a marginal latency improvement created disproportionate heat and instability. I also required 10x stress conditions before high-risk changes could graduate. Performance was valuable only if the fleet could sustain it through abnormal market volume.
 
-- I connected buffer depth, packet loss, topology, temperature, and latency to trade profitability and fully loaded cost.
-- I created functional, volume, thermal, reliability, and canary gates before rollout.
-- I rejected overclocking changes whose heat and instability outweighed a marginal latency gain.
-- I implemented cryptographic erasure, physical destruction where required, chain of custody, and finance-system closure.
+For existing capacity, I divided workloads by latency sensitivity and economic contribution. I removed inactive machines, identified over-provisioned capacity, and relocated latency-insensitive work where it could run more economically without changing trading profit.
 
-## The results
+## Retirement became a controlled technical workflow
 
-- Annual OpEx fell $1.2M, including roughly $100K in immediate monthly savings.
-- Forty inactive servers were removed, and 15% of the fleet was identified as over-provisioned.
-- A London topology change reduced latency 400 nanoseconds.
-- The fleet sustained 99.999% uptime through a 400% volume surge.
+The resale incident showed that a decommissioning ticket was not sufficient evidence of closure. I designed retirement around cryptographic erasure, physical destruction when policy required it, documented chain of custody, inventory reconciliation, and finance-system closure.
 
-## Decisions and trade-offs
+I treated an asset as retired only when the technical, physical, security, and financial records agreed. This was as important as the purchasing gate: unmanaged end-of-life assets could expose proprietary logic long after they stopped appearing on an infrastructure dashboard.
 
-- I evaluated economic utilization rather than raw CPU activity.
-- I rejected faster configurations when reliability-adjusted value is negative.
-- I treated retirement as incomplete until technical, physical, and financial controls close.
+## What the system delivered
 
-## How I led
+- Annual operating cost fell by $1.2 million, including about $100,000 in immediate monthly savings.
+- I removed 40 inactive servers and identified 15% of the fleet as over-provisioned.
+- A London topology change reduced latency by 400 nanoseconds.
+- The fleet sustained 99.999% uptime through a 400% surge in market-data volume.
 
-I created a shared decision model for engineering, finance, operations, vendors, and security, turning infrastructure lifecycle work into an observable investment discipline.
+The result was not a one-time cost reduction. Engineering, finance, operations, vendors, and security could now make lifecycle choices using the same evidence and close the loop after each change.
 
-## Why I chose this approach
+## My operating principle
 
-I used [Google SRE - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) to ground monitoring and service-signal methodology. I used [NIST - SP 800-53 Revision 4 (2015)](https://csrc.nist.gov/pubs/sp/800/53/r4/upd1/final) to ground configuration, maintenance, contingency, and audit-control framework.
+I do not manage infrastructure cost separately from workload value. Capacity, resilience, performance, and retirement are parts of the same product system. The best decision is the one that improves the value of the whole system after reliability and risk are included—not simply the one with the lowest invoice or fastest benchmark.
 
-## Sources and external context
+## External foundations
 
-I used independent methodology and market evidence to shape the work. The resume link above is included only to establish the employment timeline.
+The following sources supplied the control and reliability methodology. My resume is linked only to establish the period in which I did the work.
 
-| Source | How it informed my work | Timing |
-|---|---|---|
-| [Google SRE - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) | I used it to ground monitoring and service-signal methodology. | — |
-| [NIST - SP 800-53 Revision 4 (2015)](https://csrc.nist.gov/pubs/sp/800/53/r4/upd1/final) | I used it to ground configuration, maintenance, contingency, and audit-control framework. | — |
+| Source | How I applied it |
+|---|---|
+| [Google SRE — Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) | I used its service-signal approach to keep telemetry tied to consequential operating behavior. |
+| [NIST — SP 800-53 Revision 4 (2015)](https://csrc.nist.gov/pubs/sp/800/53/r4/upd1/final) | I used its configuration, maintenance, contingency, media-protection, and audit-control families to structure lifecycle gates and closure evidence. |

@@ -1,58 +1,59 @@
-# Trading Data Platform — 21-Day Real-Time Recovery
+# A 21-Day Recovery for a Real-Time Trading Data Platform
 
-## What I worked on
+I led this recovery during my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I completed this work during my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+The platform needed to process 2.5 million events per minute, but throughput had stalled at 1.2 million and latency had moved beyond two milliseconds. Recurring failures were pushing traders toward shadow workflows. The technical problem was serious; the more immediate program problem was that Trading, Engineering, and Compliance did not share the same evidence or even the same definition of “ready.”
 
-I led a 21-day recovery of a failing real-time data platform supporting automated trading. A daily decision cadence, shared telemetry, protected engineering time, capacity changes, executable integrity checks, and shadow validation restored both system performance and stakeholder trust.
+We had 21 days to recover the platform inside a fixed market window without putting capital or data integrity at risk.
 
-## At a glance
+## Day one: one outcome board, one decision rhythm
 
-- I recovered a Spark Streaming platform in 21 days, meeting a 2.5M-events-per-minute requirement and reaching 1.5 ms latency.
-- I raised order fill rate from 94% to 99.8% and sustained 99.99% uptime through shared telemetry, capacity remediation, and controlled cutover.
-- I captured $4M in immediate quarterly profit and an estimated $2.5M in annual slippage savings.
+I created a 15-minute daily session around three questions: What changed in production evidence? What is blocked? What decision is needed today? The session was short because its job was to unblock work, not describe activity.
 
-## The situation
+I also replaced competing reports with live views of event flow, tail latency, resource behavior, order-fill rate, and integrity checks. Basel Committee guidance on risk-data aggregation influenced this choice: trustworthy, timely, complete evidence had to be available to the people making risk-sensitive decisions.
 
-Throughput stalled at 1.2M events per minute, latency exceeded two milliseconds, and recurring failures pushed traders toward shadow workflows. Trading, Engineering, and Compliance used different evidence and definitions of success.
+## I removed three different constraints
 
-## What I needed to accomplish
+The recovery was not one tuning exercise. I separated it into capacity, focus, and proof.
 
-I needed to restore performance inside a fixed market window without risking capital or weakening data-integrity controls.
+First, I secured 300% more compute capacity so engineering could test the target envelope instead of optimizing inside an artificial ceiling. Second, I protected deep-work blocks, which stopped engineers from losing the day to fragmented escalation meetings. Third, I translated compliance requirements into executable cryptographic batch checks. That made integrity evidence repeatable and kept governance inside the delivery loop.
 
-## What I did
+The original Kafka paper provided a useful architectural foundation for reasoning about a distributed log, consumer behavior, and streaming throughput. I used that foundation alongside observed bottlenecks rather than assuming that more hardware alone would solve flow and latency.
 
-- I established a 15-minute daily war room focused on shipped work, blockers, and decisions.
-- I built live dashboards for flow, tail latency, resources, and order fill rate.
-- I secured 300% more compute capacity, protected engineering deep-work blocks, and converted compliance requirements into cryptographic batch checks.
-- I mirrored live traffic through a non-authoritative shadow stream and promoted only after throughput, latency, integrity, reliability, and audit gates passed.
+## Shadow traffic made the cutover reversible
 
-## The results
+I mirrored live traffic through a non-authoritative stream and compared the new path with production behavior. The shadow path could process realistic volume and reveal divergence without controlling orders.
 
-- The 2.5M-events-per-minute requirement was met.
-- Latency reached 1.5 ms, order fill reached 99.8%, and uptime reached 99.99%.
-- The team hit the market window and captured $4M in quarterly profit.
-- I estimated annual slippage savings reached $2.5M.
+Promotion required five gates:
 
-## Decisions and trade-offs
+1. target throughput under representative load;
+2. latency within the agreed boundary, including the tail;
+3. cryptographic integrity checks passing;
+4. stable recovery and uptime behavior; and
+5. audit evidence accepted by Compliance.
 
-- I replaced narrative status with one evidence plane.
-- I increased speed through faster decisions and automated proof, not compressed governance.
-- I used shadow mode to de-risk technical and organizational cutover.
+If any gate failed, the team had specific evidence to investigate; we did not compress governance to meet the date.
 
-## How I led
+## What happened by day 21
 
-I rebuilt trust among traders, engineers, compliance, and executives by making outcome-level telemetry the shared program language.
+- Throughput reached the 2.5-million-events-per-minute requirement.
+- Latency reached 1.5 milliseconds.
+- Order fill improved from 94% to 99.8%.
+- Uptime reached 99.99%.
+- The market window produced $4 million in immediate quarterly profit.
+- I estimated that improved execution reduced annual slippage by $2.5 million.
 
-## Why I chose this approach
+## The recovery mechanism that mattered most
 
-I used [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) to ground risk-data quality, aggregation, governance, and reporting principles. I used [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) to ground distributed-log and streaming architecture.
+Additional capacity was necessary, but the shared evidence plane changed the program. Traders could see whether execution improved. Engineers could locate resource and flow constraints. Compliance could verify integrity through executable controls. Executives could make decisions from outcomes rather than narrative status.
 
-## Sources and external context
+That is the operating model I carry into high-pressure programs: shorten the time from evidence to decision, protect the people doing the work, and make the release safer through observable, reversible transitions.
 
-I used independent methodology and market evidence to shape the work. The resume link above is included only to establish the employment timeline.
+## External foundations
 
-| Source | How it informed my work | Timing |
-|---|---|---|
-| [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) | I used it to ground risk-data quality, aggregation, governance, and reporting principles. | — |
-| [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) | I used it to ground distributed-log and streaming architecture. | — |
+These sources supplied the primary data-governance and streaming methodology. The resume link is used only for employment chronology.
+
+| Source | How I applied it |
+|---|---|
+| [Basel Committee — Principles for effective risk data aggregation and risk reporting (BCBS 239, 2013)](https://www.bis.org/publ/bcbs239.htm) | I used its emphasis on accurate, complete, timely, and adaptable risk data to create one decision-grade evidence plane. |
+| [Kreps, Narkhede and Rao — Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) | I used its distributed-log model to reason about throughput, consumers, and shadow-stream validation. |

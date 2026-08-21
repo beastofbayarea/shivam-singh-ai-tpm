@@ -1,60 +1,62 @@
-# Rakuten AI for Business - Cross-Functional Launch
+# Preparing Rakuten AI for Business for a Controlled Launch
 
-## What I worked on
+I led this work during my [Rakuten Group experience from June to December 2023](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I led this cross-functional launch work during my [Rakuten Group experience from June 2023 to December 2023](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf). I coordinated the product experience, data, evaluation, privacy, security, merchant enablement, support, and operating work needed to move Rakuten AI for Business from a broad platform ambition toward a controlled launch.
+Rakuten AI for Business was not a single feature waiting for a release date. It brought together business workflows, model behavior, enterprise data, privacy and security controls, merchant enablement, support, and operations. My role was to turn that breadth into a launch that could expand deliberately without confusing an impressive demonstration with a production-ready service.
 
-## The challenge
+## I started with the work the platform needed to complete
 
-The program served several audiences and workflows at once. Product capability was only one part of the launch: the team also needed clear business use cases, reliable evaluations, privacy and security controls, merchant readiness, support coverage, and a shared definition of when the platform was ready to expand.
+Rakuten's August 2023 collaboration announcement described the intended consumer and business reach of the AI experiences. The November platform announcement added contemporaneous detail about enterprise workflows, security, and availability. I used that market context to define representative user journeys and to make each workstream answer a concrete business question.
 
-Rakuten’s 2023 announcements established the contemporaneous product and market context for consumer, business, merchant, and partner AI experiences. I used the NIST AI Risk Management Framework to organize the governance work around mapping, measuring, managing, and governing AI risk.
+For every critical workflow, I documented:
 
-## What I did
+- the user and the task they were trying to complete;
+- the data and system dependencies;
+- the expected output and unacceptable failure modes;
+- the evaluation set and acceptance boundary;
+- the human review or escalation rule; and
+- the production signal and rollback trigger.
 
-- I established coordinated workstreams for product experience, data, evaluation, privacy and security, merchant enablement, support, and operations.
-- I built a dependency-based work-back plan with accountable owners, decision dates, launch-readiness gates, and explicit governance for risks, assumptions, issues, and dependencies.
-- I translated the intended business workflows into evaluation scenarios, acceptance thresholds, escalation paths, and rollback criteria.
-- I released the experience to bounded merchant cohorts, reviewed evidence at each gate, and expanded only when safety, reliability, usability, and support readiness met the agreed criteria.
+That structure helped the team discuss usefulness and risk in the same conversation.
 
-## How I organized delivery
+## Readiness became a body of evidence
 
-I separated offline model quality, production behavior, and business usefulness so that one attractive metric could not hide a weak operating outcome. For every critical workflow, I defined the evaluation set, acceptable error boundary, review rule, and escalation path before optimizing performance.
+I built a dependency-based work-back plan across product experience, data, evaluation, privacy, security, merchant enablement, support, and operations. Each material dependency had an owner, a decision date, an entry condition, and evidence required for closure.
 
-I treated readiness as demonstrated evidence rather than a calendar date. The work-back plan connected dependencies to entry criteria, decision owners, observability, rollback triggers, and named incident ownership. That made unresolved trade-offs visible early and prevented a late-stage launch review from becoming the first real integration point.
+The NIST AI Risk Management Framework shaped the governance cycle. I used its govern, map, measure, and manage functions to make risk work continuous: define context and accountability, identify the ways a workflow could fail, measure behavior, and decide what to mitigate or accept.
 
-## How I led the program
+I kept three evidence layers separate:
 
-I ran a small decision-making core across product, engineering, data science, security, legal, operations, go-to-market, and representative users. I clarified who recommended, decided, executed, and needed to be consulted, then used a concise decision log to keep the reasoning and conditions visible.
+1. Offline quality told us whether the system performed on a defined evaluation set.
+2. Production behavior told us whether it remained reliable, responsive, and supportable under real conditions.
+3. Business usefulness told us whether merchants could complete valuable work.
 
-I kept the weekly working session focused on evidence, dependencies, and risks rather than broad status reporting. Executive reviews were tied to irreversible choices, material risk changes, and commitment gates. Merchant and operator feedback stayed connected to the backlog so that qualitative evidence could change delivery priorities.
+A strong result in one layer could not cancel a failure in another.
 
-## How I sequenced the launch
+## The launch expanded by cohort, not optimism
 
-I began by documenting the current workflows, controls, service expectations, pain points, and ownership boundaries. I separated verified facts from assumptions, chose a bounded cohort that could test the central value and risk questions, and defined acceptance criteria, instrumentation, support, and stopping conditions before release.
+I selected bounded merchant cohorts that could test the central value and risk questions. Before release, the team agreed on instrumentation, support coverage, stopping conditions, and who could make the decision to continue, narrow, revise, or roll back.
 
-After each release, I compared expected outcomes with observed behavior and used the evidence to continue, revise, narrow, or stop. I expanded only when the operating owner, controls, documentation, support capacity, and measurement system were ready.
+After each cohort, I brought product, engineering, data science, security, legal, operations, go-to-market, and representative-user evidence into one review. We looked at evaluation pass rate, unsupported-response rate, latency, incident recovery, time to first completed workflow, eligible-merchant adoption, and support demand. Cohort views prevented an attractive aggregate from hiding a weak merchant segment.
 
-## What I measured
+## How I kept the program moving
 
-| Measure | How I used it |
+The weekly working session was for evidence, dependencies, and decisions—not a tour of status slides. I maintained a concise decision log that showed who recommended, who decided, the evidence considered, and the conditions attached to the decision. I reserved executive reviews for irreversible choices, material risk changes, and commitment gates.
+
+Merchant and operator feedback remained connected to the backlog. If qualitative evidence exposed an unclear workflow, unsafe behavior, or excessive support burden, it could change sequencing even when a top-line metric looked healthy.
+
+## The program outcome
+
+I left the launch with a reusable operating system: accountable workstreams, workflow-level evaluations, observable readiness gates, cohort expansion, defined rollback authority, and a feedback loop from merchants and operators into delivery priorities.
+
+The most important shift was conceptual. The team no longer treated readiness as a date on a plan. We treated it as evidence that the product, controls, support model, and business workflow were ready together.
+
+## External foundations
+
+These sources are the primary market and governance foundation for this account. The resume link establishes employment chronology only.
+
+| Source | How I applied it |
 |---|---|
-| Critical-dependency closure and readiness-gate acceptance | I used these measures to expose unresolved ownership and integration risk before a launch decision. |
-| Evaluation pass rate and unsupported-response rate | I used these measures to identify weak workflows and decide whether the experience was trustworthy enough for the next stage. |
-| Latency and incident recovery | I used these measures to locate operational constraints and test whether the support and recovery model was ready. |
-| Time to first completed workflow and eligible-merchant adoption | I used these measures to determine whether merchants reached meaningful value, with cohort views to prevent aggregate growth from hiding weak segments. |
-| Support demand | I used this measure to understand usability gaps, operating load, and where the product or enablement needed to change. |
-
-## What I watched closely
-
-I watched for selective evidence, hidden dependencies, unclear decision rights, weak cohort performance, and model behavior that looked impressive in a demonstration but was unsafe, unsupported, biased, or too expensive in production. Each material risk had an owner, an early-warning indicator, a mitigation, and a trigger for escalation or rollback.
-
-## Sources and external context
-
-I used independent market evidence and governance methodology as the primary foundation for the work. The resume link above is included only to establish the employment timeline.
-
-| Source | How it informed my work | Timing |
-|---|---|---|
-| [Rakuten - Collaboration to develop AI experiences for consumers and businesses (August 2023)](https://global.rakuten.com/corp/news/press/2023/0802_01.html) | I used it to ground contemporaneous market evidence for consumer, business, merchant, and partner AI use cases. | — |
-| [Rakuten - Rakuten AI for Business platform announcement (November 2023)](https://global.rakuten.com/corp/news/press/2023/1114_02.html) | I used it to ground contemporaneous evidence for the platform scope, business workflows, availability model, and security proposition. | — |
-| [NIST - AI Risk Management Framework 1.0 (January 2023)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) | I used it to ground governance methodology for mapping, measuring, managing, and governing AI risk. | — |
+| [Rakuten — Collaboration to develop AI experiences for consumers and businesses (August 2023)](https://global.rakuten.com/corp/news/press/2023/0802_01.html) | I used the contemporaneous announcement to frame the intended audiences and cross-functional scope. |
+| [Rakuten — Rakuten AI for Business platform announcement (November 2023)](https://global.rakuten.com/corp/news/press/2023/1114_02.html) | I used the platform's stated business workflows, security proposition, and availability model to define launch-readiness questions. |
+| [NIST — AI Risk Management Framework 1.0 (January 2023)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) | I used its govern-map-measure-manage cycle to organize ownership, evaluation, mitigation, and expansion decisions. |

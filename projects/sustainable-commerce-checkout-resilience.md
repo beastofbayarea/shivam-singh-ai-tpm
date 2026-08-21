@@ -1,58 +1,54 @@
-# Amazon Sustainable Commerce — Resilient Checkout & Category Growth
+# Protecting Checkout While Growing Sustainable Commerce
 
-## What I worked on
+I led this work during my [AWS experience beginning in July 2024](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I completed this work during my [AWS experience from July 2024 to present](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+This program joined two goals that initially seemed compatible: make verified sustainability information more useful to customers, and modernize a slow mobile checkout. The difficult lesson came during peak traffic, when an optional enrichment service became a synchronous dependency in the payment path. A DNS and TTL problem then exhausted threads, produced a 45-minute outage, and drove transaction failures to 15%.
 
-I combined checkout modernization with verified sustainable-category growth, then led correction after an external enrichment dependency triggered a peak outage. The redesign isolated payment from optional data, added active-active resilience and circuit breakers, and connected technical recovery to customer and commercial outcomes.
+## My first decision was to contain, not perfect
 
-## At a glance
+I declared the incident and routed 75% of transactions back through the known-stable legacy gateway. That reduced the failure rate from 15% to 2%. The fallback was slower and did not represent the target architecture, but it restored the customer's ability to pay while the team investigated safely.
 
-- I led correction of a peak checkout outage that caused a 15% transaction-failure rate and roughly $3M in lost revenue, restoring a legacy fallback to contain impact.
-- I redesigned payment as a mandatory path and sustainability data as optional enrichment, adding cell isolation, circuit breakers, and multi-region active-active capacity.
-- I reduced checkout latency from 1.5 seconds to 800 ms, achieved 99.999% availability, cut cart abandonment from 45% to 30%, and recovered the holiday shortfall.
+I kept technical containment, customer communication, credits, vendor recovery, and revenue impact in the same incident view. A checkout incident is not complete when the graph turns green; it is complete when affected customers and commercial obligations have been addressed as well.
 
-## The situation
+## I redrew the critical path
 
-Customers distrusted vague sustainability claims while mobile checkout was slow. During peak traffic, a DNS/TTL issue caused synchronous calls to an external enrichment service, exhausting threads and creating a 45-minute outage.
+The correction process classified every dependency as mandatory, deferrable, or optional. Payment authorization and order integrity were mandatory. Sustainability enrichment was valuable, but it did not need to block completion of the transaction.
 
-## What I needed to accomplish
+That distinction drove the permanent design:
 
-I needed to protect payment completion, correct the architectural failure, restore customer trust, and preserve verified sustainability value without keeping it on the critical path.
+- I removed optional enrichment from the synchronous payment path.
+- I introduced a 500-millisecond circuit-breaker threshold so a slow dependency would degrade rather than cascade.
+- I used cell isolation and shuffle sharding to reduce the blast radius of a failure.
+- I established active-active regional capacity and tested failover under peak conditions.
 
-## What I did
+The AWS Well-Architected Reliability Pillar provided the primary engineering frame: design for failure, isolate components, monitor behavior, and verify recovery. The FTC Green Guides shaped a separate but equally important control—environmental claims had to be specific and supportable. Resilience could not come from removing evidence; it had to come from moving evidence off the payment-critical path.
 
-- I declared the outage and routed 75% of transactions to the stable legacy gateway, reducing failure from 15% to 2%.
-- I led a correction-of-error process that reclassified every dependency as mandatory, deferrable, or optional.
-- I implemented cell isolation, shuffle sharding, a 500 ms circuit threshold, and active-active regional capacity.
-- I tracked customer credits, vendor SLA recovery, sentiment, category conversion, and revenue restoration alongside technical remediation.
+## Recovery had technical and customer measures
+
+I tracked latency, availability, transaction failure, and circuit activation alongside cart abandonment, mobile conversion, sustainable-category conversion, customer credits, sentiment, vendor recovery, and revenue restoration.
+
+This prevented a narrow “service restored” conclusion. If the platform was healthy but customers still abandoned checkout or distrusted the category claims, the product had not recovered.
 
 ## The results
 
-- Checkout latency reached 800 ms and availability reached 99.999%.
-- Cart abandonment fell from 45% to 30%, and mobile conversion rose from 0.8% to 1.0%.
-- Sustainable-category conversion improved from 1.9% to 2.2%.
-- The circuit breaker later activated 14 times without another outage, and the roughly $3M holiday shortfall was recovered.
+- Checkout latency fell from 1.5 seconds to 800 milliseconds.
+- Availability reached 99.999%.
+- Cart abandonment declined from 45% to 30%, while mobile conversion increased from 0.8% to 1.0%.
+- Sustainable-category conversion increased from 1.9% to 2.2%.
+- The circuit breaker later activated 14 times without another outage.
+- The roughly $3 million holiday revenue shortfall was recovered.
 
-## Decisions and trade-offs
+## What I learned from the outage
 
-- I restored a slower known-safe gateway before pursuing the permanent fix.
-- I removed optional sustainability data from the synchronous payment path.
-- I treated customer restitution and vendor economics as part of incident completion.
+Useful customer context does not automatically belong in the critical path. I now ask two questions whenever a feature adds a dependency: “Must this answer exist before the transaction can complete?” and “What customer experience should remain when it does not?” Those questions make graceful degradation a product decision, not just an engineering mechanism.
 
-## How I led
+I also learned to define recovery in commercial terms. Architecture, customer restitution, supplier accountability, and trust were all part of the same program.
 
-I coordinated platform, category, vendor, customer-service, and executive teams through containment, correction, architecture redesign, and measurable commercial recovery.
+## External foundations
 
-## Why I chose this approach
+The methodology and claims guidance below are the primary external foundation. My resume establishes only when I held the role.
 
-I used [AWS - Well-Architected Reliability Pillar (2024)](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) to ground reliability and failure-management methodology. I used [U.S. FTC - Green Guides](https://www.ftc.gov/legal-library/browse/rules/green-guides) to ground environmental-marketing and claim-qualification guidance.
-
-## Sources and external context
-
-I used independent methodology and market evidence to shape the work. The resume link above is included only to establish the employment timeline.
-
-| Source | How it informed my work | Timing |
-|---|---|---|
-| [AWS - Well-Architected Reliability Pillar (2024)](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) | I used it to ground reliability and failure-management methodology. | — |
-| [U.S. FTC - Green Guides](https://www.ftc.gov/legal-library/browse/rules/green-guides) | I used it to ground environmental-marketing and claim-qualification guidance. | — |
+| Source | How I applied it |
+|---|---|
+| [AWS — Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) | I used its failure-management, isolation, observability, and recovery principles to redesign the checkout path. |
+| [U.S. Federal Trade Commission — Green Guides](https://www.ftc.gov/legal-library/browse/rules/green-guides) | I used its guidance on qualified and supportable environmental claims to preserve trust while decoupling enrichment from payment. |

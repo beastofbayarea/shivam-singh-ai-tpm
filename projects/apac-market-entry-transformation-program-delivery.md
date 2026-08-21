@@ -1,59 +1,48 @@
-# APAC Market Entry - Transformation Program Delivery
+# Turning an APAC Market Opportunity into an Operating Program
 
-## What I worked on
+I did this work while I was at [McKinsey, between July 2014 and June 2016](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I completed this work during my [McKinsey experience from July 2014 to June 2016](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+The assignment began with an attractive number: a $1.1 billion APAC opportunity. My job was to make that opportunity executable. That meant resolving a much less glamorous set of questions: Who owned the data? Which decisions belonged in the regional hub? What had to stay in-country? How would marketing, sales, compliance, finance, and technology know that a market was ready to launch?
 
-I structured and delivered a two-year transformation supporting a $1.1B APAC opportunity. A governed analytics platform became the decision system for a hub-and-spoke market-entry program, with explicit workstream ownership, regional decision rights, compliance gates, and localized GTM execution.
+## The obstacle was not a lack of ambition
 
-## At a glance
+The existing approach combined fragmented reports, unclear data ownership, and a launch playbook copied from other regions. Reporting arrived as much as three weeks late, and the generic playbook converted only 8% in Asian markets. A technically correct regional strategy would still fail if local teams could not challenge the assumptions or if compliance entered only at the end.
 
-- I led transformation from three-week reporting lag to sub-15-minute decision data while reducing total cost of ownership 40%.
-- I defined platform ownership, data stewardship, certified metrics, regional challenge rights, and a hub-and-spoke delivery model for market entry.
-- I improved conversion from 4% to 22%, reduced CAC payback from 18 to nine months, shortened compliance review 30%, and enabled $1.1B in APAC AUM.
+I reframed the work as a transformation program with a decision system at its center. The analytics platform was not the objective; it was the mechanism that allowed leaders to make consistent, timely market-entry choices.
 
-## The situation
+## I designed the operating model before scaling the technology
 
-The market-entry program relied on fragmented reports, unowned data quality, and a copied launch playbook that converted only 8% in Asia.
+I began by assigning explicit accountability for platform reliability, data quality, certified metrics, and regional decisions. I also gave local teams formal challenge rights. That distinction mattered: the hub could maintain common standards, while each market could surface local behavior, regulation, and channel economics that a global model missed.
 
-## What I needed to accomplish
+I organized delivery around a Singapore governance hub and local data and go-to-market spokes in Vietnam and Indonesia. Regulated primary data stayed in-country; anonymized insight could return to the hub. This preserved a regional learning loop without treating data movement as an afterthought.
 
-I needed to convert the market-entry strategy into an executable transformation program spanning technology, analytics, regulation, marketing, sales, finance, and regional operations.
+The World Bank's implementation guidance influenced how I separated institutional ownership, risk allocation, preparation, and delivery. The Agile Manifesto reinforced a second choice: prove the operating model with a decision-critical release instead of waiting for the entire platform to be finished.
 
-## What I did
+## The first release had to answer a real decision
 
-- I established explicit ownership for platform reliability, data quality, certified metrics, and regional decisions.
-- I used a single real-time launch dashboard as the first delivery milestone to prove value before funding the full lakehouse.
-- I coordinated local experts and data-science teams to identify regional bias and recalibrate the global scoring model by market.
-- I sequenced a Singapore governance hub with local data and GTM spokes in Vietnam and Indonesia.
-- I turned regulatory constraints into repeatable data, approval, messaging, and launch requirements.
+Rather than request funding for a complete lakehouse on faith, I made one real-time launch dashboard the first milestone. It combined a small set of certified measures, named owners, and clear escalation rules. The goal was not dashboard adoption; it was to show that leaders could act on fresher evidence and resolve conflicting interpretations quickly.
 
-## The results
+Once that loop worked, I coordinated local experts with data-science teams to identify regional bias and recalibrate the global scoring model market by market. I converted regulatory requirements into repeatable data, approval, messaging, and launch gates so compliance became part of the delivery flow rather than a final veto.
 
-- Data latency fell below 15 minutes, and total cost of ownership declined 40%.
-- Conversion reached 22%.
-- CAC payback fell to nine months, and compliance review time improved 30%.
-- The program supported $1.1B in APAC AUM.
+## What changed
 
-## Decisions and trade-offs
+- Decision-data latency fell from weeks to under 15 minutes.
+- Total platform cost of ownership declined 40%.
+- Conversion reached 22%, while CAC payback fell from 18 months to nine.
+- Compliance review time improved 30%.
+- The program supported $1.1 billion in APAC assets under management.
 
-- I established accountable data ownership before scaling market activity.
-- I kept primary regulated data in-country while returning anonymized insight to the regional hub.
-- I proved the program through one decision-critical release before expanding the platform.
+Those outcomes came from the combination of technology and decision design. Faster data mattered because ownership, challenge rights, and launch gates made it usable.
 
-## How I led
+## The lesson I carried forward
 
-I aligned the CFO, CIO, CMO, technology, analytics, marketing, sales, compliance, finance, and regional leaders around one market-entry scorecard, delivery model, and set of launch gates.
+In a multi-market transformation, standardization and localization are not opposing choices. I standardize definitions, evidence, and governance; I localize customer assumptions, regulatory execution, and market decisions. That division lets a program learn across countries without pretending those countries are interchangeable.
 
-## Why I chose this approach
+## External foundations
 
-I used [World Bank - Public-Private Partnerships Reference Guide 2.0 (2014)](https://ppp.worldbank.org/library/public-private-partnerships-reference-guide-version-20) to ground institutional, risk-allocation, development, and implementation framework. I used [Manifesto for Agile Software Development (2001)](https://agilemanifesto.org/) to ground iterative delivery and collaboration principles.
+The sources below are the methodology foundation for this account. My resume is linked only to establish when I held the role; it is not used as proof of the project outcomes.
 
-## Sources and external context
-
-I used independent methodology and market evidence to shape the work. The resume link above is included only to establish the employment timeline.
-
-| Source | How it informed my work | Timing |
-|---|---|---|
-| [World Bank - Public-Private Partnerships Reference Guide 2.0 (2014)](https://ppp.worldbank.org/library/public-private-partnerships-reference-guide-version-20) | I used it to ground institutional, risk-allocation, development, and implementation framework. | — |
-| [Manifesto for Agile Software Development (2001)](https://agilemanifesto.org/) | I used it to ground iterative delivery and collaboration principles. | — |
+| Source | How I applied it |
+|---|---|
+| [World Bank — Public-Private Partnerships Reference Guide 2.0 (2014)](https://ppp.worldbank.org/library/public-private-partnerships-reference-guide-version-20) | I adapted its separation of institutional responsibility, risk allocation, preparation, and implementation to the program's governance model. |
+| [Manifesto for Agile Software Development](https://agilemanifesto.org/) | I used its emphasis on working outcomes and collaboration to sequence a decision-critical release before broader platform expansion. |
