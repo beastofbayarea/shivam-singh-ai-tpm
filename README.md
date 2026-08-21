@@ -16,6 +16,19 @@ Use the PDF for review and sharing. Use the DOCX for editable, ATS-friendly appl
 - Dependency, risk, and RAID governance
 - Launch readiness, compliance, and executive escalation
 
+## Project interview stories
+
+Each story adapts a portfolio project to this role narrative, with resume-ready impact, interview framing, decisions, metrics, and a link to the source page.
+
+- [Inventory signals: streaming regional fulfillment](./projects/inventory-signals-streaming-regional-fulfillment.md) - cross-system delivery of real-time fulfillment signals
+- [Regulated FinTech cloud: regional architecture](./projects/regulated-fintech-cloud-regional-architecture.md) - data-residency planning and regional delivery governance
+- [Legacy integration: policy-as-code self-service](./projects/legacy-integration-policy-as-code-self-service.md) - standardized integration controls and developer enablement
+- [FinTech AI security: control plane](./projects/fintech-ai-security-control-plane.md) - coordinated security, compliance, and launch controls
+- [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) - rapid program recovery, dependencies, and execution cadence
+- [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) - fleet planning, capacity governance, and lifecycle operations
+- [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md) - incident recovery and joint-accountability redesign
+- [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) - resilient launch execution across commerce systems
+
 ## Profile
 
 - Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
