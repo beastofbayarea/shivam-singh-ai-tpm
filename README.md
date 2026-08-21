@@ -26,6 +26,12 @@ Stories are grouped by their primary resume experience in reverse chronological 
 
 - [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) - resilient launch execution across commerce systems
 
+### Rakuten Group, Inc.
+
+**Technical Program Manager, Marketplace Strategy & AI Programs - MBA Intern** | June 2023 - December 2023
+
+- [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) - work-back planning, dependency governance, staged rollout, and launch readiness for merchant AI workflows
+
 ### Microsoft Corporation
 
 **Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
