@@ -24,8 +24,6 @@ Stories are grouped by their primary resume experience in reverse chronological 
 
 **Principal Technical Program Manager, Sovereign Cloud** | July 2024 - Present
 
-- [Inventory signals: streaming regional fulfillment](./projects/inventory-signals-streaming-regional-fulfillment.md) - cross-system delivery of real-time fulfillment signals
-- [FinTech AI security: control plane](./projects/fintech-ai-security-control-plane.md) - coordinated security, compliance, and launch controls
 - [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md) - resilient launch execution across commerce systems
 
 ### Microsoft Corporation
