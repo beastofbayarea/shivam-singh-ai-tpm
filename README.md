@@ -43,6 +43,12 @@ Stories are grouped by their primary resume experience in reverse chronological 
 - [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md) - rapid program recovery, dependencies, and execution cadence
 - [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) - fleet planning, capacity governance, and lifecycle operations
 
+### McKinsey & Company
+
+**Engagement Associate, Transformation Program Delivery** | July 2014 - June 2016
+
+- [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) - data-platform modernization, regional governance, dependencies, and launch execution
+
 ## Profile
 
 - Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
