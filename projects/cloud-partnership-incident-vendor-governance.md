@@ -6,6 +6,8 @@ I led the recovery of a cloud partnership in Microsoft’s regulated-cloud organ
 
 The partnership represented about $10 million in annual cloud spend across 20 startups serving roughly one million users. Those portfolio totals were useful for executive attention but dangerous for diagnosis: each company had a different architecture, demand pattern, customer promise, and exposure.
 
+I owned recovery across that entire commercial and technical perimeter. My job was to turn 20 different customer failures into a prioritized engineering plan, force the provider and startups onto reconciled evidence, secure dedicated recovery capacity, deliver late platform commitments, negotiate economic accountability, and leave behind governance strong enough to protect a $10 million annual relationship after the crisis team disbanded.
+
 The retained incident record names three immediate effects. A fintech reported an estimated $500,000 loss during a two-hour event; an analytics company saw engagement fall 15%; and three promised APIs were late. I did not aggregate those into a fictional portfolio-loss number. The financial estimate belonged to one startup, the engagement decline to another, and the delivery delay to a shared provider commitment.
 
 Founders wanted remedies, engineering teams wanted stable systems, the provider wanted time for architectural work, and account leaders wanted to preserve the relationship. My job was to keep those motives visible while forcing decisions from common evidence.

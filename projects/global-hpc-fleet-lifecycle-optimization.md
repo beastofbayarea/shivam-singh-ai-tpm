@@ -10,6 +10,8 @@ The more important finding was systemic. Teams could monitor individual machines
 
 I created one lifecycle decision model with four evidence families:
 
+I owned the cross-region capital and control system behind the fleet, from demand forecast and hardware acceptance through placement, tuning, maintenance, retirement, sanitization, and disposal. That authority let me reject attractive benchmark gains, stop a 50-unit defect from reaching production, remove 40 idle machines, and connect engineering choices to a reported $1.2 million annualized cost run rate without weakening critical-market capacity.
+
 - **Trading demand:** strategy criticality, eligible workload, market-window sensitivity, capacity headroom, and failure consequence.
 - **Technical health:** latency distribution, errors, thermal behavior, memory and firmware faults, network topology, utilization, and recovery history.
 - **Economics:** purchase and lease terms, data-centre and power cost, vendor billing, relocation cost, support burden, and measured P&L association.

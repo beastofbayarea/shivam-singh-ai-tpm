@@ -18,6 +18,8 @@ The initial evidence was uncomfortable:
 
 I would not allow those numbers to collapse into one success metric. Claim trust, page performance, payment completion, conversion, and commercial value each had a different owner and measurement method.
 
+I owned both halves of a high-stakes program: the evidence system behind environmental claims and the transaction architecture protecting checkout at roughly 1,600 orders per second. When the coupled design contributed to 45 minutes of failure and an estimated $3 million in lost orders, I directed containment, customer remedy, vendor recovery, critical-path isolation, regional resilience, and the release proof required to restore full traffic.
+
 ## How I changed the system
 
 I convened product, sustainability, legal, engineering, operations, and external certifiers to replace generic labels with claim-level evidence. Each eligible product needed a named standard or certificate, a current verification state, and shopper-facing language tied to that evidence. The [FTC Green Guides](https://www.ftc.gov/business-guidance/resources/environmental-claims-summary-green-guides) informed the discipline: broad environmental claims require qualification and substantiation rather than optimistic copy.

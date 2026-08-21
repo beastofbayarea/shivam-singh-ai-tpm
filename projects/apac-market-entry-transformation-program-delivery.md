@@ -6,6 +6,8 @@ I led the delivery structure for an APAC market-entry transformation at McKinsey
 
 The program covered a two-year path toward an approximately $1.1 billion APAC opportunity. The retained record describes that figure as assets under management supported by the transformation; I do not present it as revenue or value caused by my work.
 
+I owned the program control plane behind that opportunity: country sequencing, workstream charters, data-to-decision latency, local challenge rights, legal and commercial readiness, dependency acceptance, and the executive trade-offs that released each market. The scale came from federating country authority without letting local definitions, systems, or approval paths turn one regional strategy into unrelated launches.
+
 Decision information took from five days to three weeks to assemble. No one owned the definitions end to end. Analysts spent an estimated $250,000 on recurring cleanup, while delayed or inconsistent demand signals were associated with roughly $500,000 of stockout exposure. A global or UK-derived go-to-market playbook was also misreading local buyers.
 
 Centralizing every decision in a regional office would have accelerated standardization and destroyed country context. Giving every market full autonomy would have reproduced definitions, controls, and technology. I designed a hub-and-spoke operating model:
