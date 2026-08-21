@@ -24,6 +24,22 @@ The [Rakuten AI for Business launch](./projects/rakuten-ai-for-business-cross-fu
 
 [APAC market-entry transformation](./projects/apac-market-entry-transformation-program-delivery.md) worked at organizational scale. I designed a hub-and-spoke decision system for a stated $1.1 billion opportunity, made every workstream terminate in a named consumer decision, and forced three executive conflicts into explicit choices. Country release packets connected product, regulatory, operating, technical, and commercial evidence while preserving a material 4%-versus-8% conversion-baseline discrepancy instead of optimizing against false precision.
 
+## Program case — 21 days to restore authority
+
+**Q: Tell me about a program you owned end to end.**
+
+**A:** I led the 21-day recovery of a real-time trading-data platform whose capacity, latency, and integrity failures had made it unsafe for the business to trust. The program crossed Platform Engineering, Market Data, Trading, Quant, Risk, Operations, vendors, and executive leadership, so the core challenge was not producing a faster plan; it was creating one definition of recovery and one authority model.
+
+I ran the work through the PMBOK process groups. During **initiation**, I defined the business outcome—restore a decision-grade data path—and named who could declare recovery. The executive sponsor was accountable; I was responsible for the integrated program and gate record; engineering and data owners were responsible for remediation; Trading, Quant, Risk, and Operations were consulted on usefulness and safety; leadership and affected users were informed through a fixed cadence.
+
+During **planning**, I replaced a date-only plan with five promotion gates: capacity, decision-path latency, data integrity, fault recovery, and business acceptance. The launch-readiness record assigned every requirement an owner, evidence source, threshold, reviewer, and rollback condition. The deadline remained 21 days, but lower-value cleanup could move after recovery; none of the five gates could be traded for schedule.
+
+During **execution**, the first 72 hours joined technical symptoms to trading consequence. Days 4–10 created and stress-tested headroom. Days 11–17 made reconciliation executable through expected-versus-observed counts, schema, time ranges, key fields, quarantine, and replay. Days 18–21 ran shadow comparison and transferred authority jointly rather than allowing the delivery team to mark its own work complete.
+
+For **monitoring and control**, I used one program record that paired system measures with business measures. Throughput moved from 1.2 million to 2.5 million events per minute, latency reached 1.5 milliseconds, fill rate moved from 94% to 99.8%, and availability recorded 99.99% over the retained observation window. I did not present that reading as annual uptime because the window was missing. Daily risk review controlled scope, dependencies, vendor action, and gate status; any failed integrity comparison stopped promotion.
+
+For **closure**, the team completed shadow evidence, joint acceptance, runbooks, incident ownership, and the operating handoff. The platform regained authority in 21 days, but the more durable result was the recovery system itself: future teams had a repeatable way to connect telemetry, trading consequence, integrity, rollback, and shared authorization. That is what end-to-end program ownership means to me—delivery is complete only when the receiving organization can operate and defend the outcome.
+
 ## The operating model behind the stories
 
 These six programs use different mechanisms because their risks are different. The reusable leadership discipline is smaller:
