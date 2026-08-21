@@ -1,61 +1,37 @@
-# Shivam Singh - AI and Cloud Technical Program Management
+# Shivam Singh — AI & Cloud Technical Program Management
 
-## Profile
+The programs in this portfolio begin where a conventional plan stops being useful: a production incident spans company boundaries, an AI launch has no shared definition of ready, a platform must regain authority in days, or a capital-intensive system needs decisions that engineering, finance, risk, and executives can all defend.
 
-Hi, I’m Shivam. I’m at my best when a program has real technical complexity, several organizations around the table, and no obvious path from strategy to launch. I help teams turn that ambiguity into decisions, owners, milestones, and a delivery system people can trust.
+My job in those moments is to create the evidence, decision rights, and operating cadence that let many teams act as one program.
 
-You can reach me at [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/beastofbayarea).
+[Resume](./shivam-singh-ai-tpm.pdf) · [LinkedIn](https://www.linkedin.com/in/beastofbayarea) · [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
 
-## What working with me looks like
+## When the clock is measured in minutes
 
-I make the plan concrete enough to expose disagreements early. That means defining outcomes, decision rights, interfaces, risks, assumptions, issues, dependencies, and escalation paths before they become status-report surprises.
+In [sustainable-commerce checkout resilience](./projects/sustainable-commerce-checkout-resilience.md), an optional enrichment service had entered the payment path and helped turn a product promise into a peak incident. I separated the two commitments—trustworthy sustainability evidence and reliable checkout—then ran containment, dependency redesign, claim governance, and the customer/economic record as distinct workstreams. The result was not merely restored availability; it was a new rule that optional intelligence could never again hold payment authority.
 
-I also pay close attention to the human side of program leadership. A good cadence should make it easier for engineers, product leaders, security teams, legal partners, and executives to tell the truth, resolve trade-offs, and keep moving.
+[A cloud-partnership incident across 20 startups and roughly one million users](./projects/cloud-partnership-incident-vendor-governance.md) required a different command model. I used three ledgers: service health, delivery commitments, and commercial accountability. That prevented one startup's estimated loss, another's engagement decline, delayed APIs, availability readings, and a contract remedy from becoming one misleading portfolio number. The temporary command center became the permanent governance model for a $10 million annual relationship.
 
-## Program walkthroughs
+## When the clock is measured in days
 
-I’ve grouped these walkthroughs by career experience in reverse chronological order. Each is reconstructed independently around its own product, stakeholders, technical constraints, evidence, and decisions. The source notes inside the files distinguish retained project evidence, external benchmarks, later company developments, estimates, and unresolved discrepancies.
+The [21-day recovery of a real-time trading-data platform](./projects/trading-data-platform-21-day-recovery.md) was a transfer-of-authority problem. From day zero, I defined who could declare recovery; within 72 hours, technical symptoms were tied to economic consequence; by day 17, integrity rules were executable; and only after shadow comparison did the platform regain production authority. Five promotion gates separated capacity, latency, correctness, recovery, and business exposure so schedule pressure could not redefine “safe.”
 
-### Amazon Web Services (AWS)
+The [Rakuten AI for Business launch](./projects/rakuten-ai-for-business-cross-functional-launch.md) used the same principle before an incident existed. I wrote a launch constitution rather than a calendar: each of three products carried its own users, data, evaluation, privacy, security, legal, enablement, support, and rollback conditions. Ecosystem scale stayed out of the adoption denominator. The program delivered decision coherence across functions without fabricating unsupported post-launch results.
 
-**Principal Technical Program Manager, Sovereign Cloud** | July 2024 - Present
+## When the clock is measured in capital cycles
 
-#### [Sustainable commerce: checkout resilience](./projects/sustainable-commerce-checkout-resilience.md)
+[Global HPC fleet lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md) treated compute as a portfolio of decisions rather than a procurement queue. Demand forecasts, physical topology, stress evidence, benchmark quality, defect containment, idle-capacity economics, custody, and retirement formed one closed loop. I rejected benchmark wins that did not represent the trading path, kept a hardware defect out of production, and required stranded capacity to prove its value before more capital followed it.
 
-I separated two customer promises that had been dangerously coupled: trustworthy sustainability evidence and reliable payment. After an optional enrichment service helped trigger a peak outage, I led containment and a critical-path redesign, while keeping incident loss, customer remedies, later seasonal sales, and partial conversion recovery analytically distinct. The source calls this an Amazon Sustainable Commerce program; the walkthrough explains why I describe it as commerce work during my AWS role without claiming Amazon retail employment.
+[APAC market-entry transformation](./projects/apac-market-entry-transformation-program-delivery.md) worked at organizational scale. I designed a hub-and-spoke decision system for a stated $1.1 billion opportunity, made every workstream terminate in a named consumer decision, and forced three executive conflicts into explicit choices. Country release packets connected product, regulatory, operating, technical, and commercial evidence while preserving a material 4%-versus-8% conversion-baseline discrepancy instead of optimizing against false precision.
 
-### Rakuten Group, Inc.
+## The operating model behind the stories
 
-**Technical Program Manager, Marketplace Strategy & AI Programs - MBA Intern** | June 2023 - December 2023
+These six programs use different mechanisms because their risks are different. The reusable leadership discipline is smaller:
 
-#### [Rakuten AI for Business: cross-functional launch](./projects/rakuten-ai-for-business-cross-functional-launch.md)
+- define the outcome and who can authorize it;
+- turn assumptions, interfaces, dependencies, risks, and promises into inspectable evidence;
+- separate technical health, delivery, commercial value, and modeled exposure;
+- make escalation resolve a decision, not just raise visibility; and
+- transfer authority only when the receiving team can operate, monitor, and recover the system.
 
-I converted an invitation-only AI platform announcement into a controlled-launch decision system across product, data, evaluation, privacy, security, legal, business, enablement, and support. The walkthrough quantifies the public product surface and measurement design while deliberately making no unsupported adoption, accuracy, productivity, revenue, or later merchant-launch claim.
-
-### Microsoft Corporation
-
-**Senior Technical Program Manager, Regulated Cloud and Compliance** | January 2020 - August 2022
-
-#### [Cloud partnership incident: vendor governance](./projects/cloud-partnership-incident-vendor-governance.md)
-
-I recovered governance of a $10M annual cloud relationship spanning 20 startups and roughly one million users. I ran service health, delivery commitments, and commercial remedies as separate ledgers, so one startup’s estimated loss, another’s engagement decline, delayed APIs, availability readings, and a contract concession were never blended into an exaggerated portfolio result.
-
-### The D. E. Shaw Group
-
-**Vice President, Technical Program Management - Real-Time Risk** | July 2016 - December 2019
-
-#### [Trading data platform: 21-day recovery](./projects/trading-data-platform-21-day-recovery.md)
-
-I led a 21-day recovery of a failing real-time trading-data path, using five promotion gates to determine when it could regain authority. The account distinguishes stream-processing semantics from downstream latency, reports ambiguous capacity wording as ambiguous, and separates market-window P&L from estimated slippage savings and modeled avoided loss.
-
-#### [Global HPC fleet: lifecycle optimization](./projects/global-hpc-fleet-lifecycle-optimization.md)
-
-I created a closed-loop lifecycle control system for a global high-performance computing fleet, connecting trading demand, physical topology, stress evidence, economics, and custody from forecast through disposal. A March 2020 surge in the inherited source occurred after my December 2019 departure and is explicitly excluded from my personal outcomes.
-
-### McKinsey & Company
-
-**Engagement Associate, Transformation Program Delivery** | July 2014 - June 2016
-
-#### [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md)
-
-I structured a hub-and-spoke decision system for a two-year transformation supporting a stated $1.1B APAC opportunity. The account preserves a material 4%-versus-8% conversion-baseline conflict and removes Redshift Spectrum and RA3 from the architecture because both launched after my engagement ended.
+That is how I lead AI and cloud programs: not by making the status report greener, but by making the next consequential decision safer, faster, and harder to misunderstand.
