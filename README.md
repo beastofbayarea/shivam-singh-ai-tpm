@@ -2,6 +2,11 @@
 
 Role-targeted resume for leading complex AI, cloud, regulatory, and cross-functional programs from planning through launch.
 
+## Profile
+
+- Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
+- [LinkedIn](https://www.linkedin.com/in/beastofbayarea)
+
 ## Resume formats
 
 - [View the PDF](./shivam-singh-ai-tpm.pdf)
@@ -51,7 +56,3 @@ Stories are grouped by their primary resume experience in reverse chronological 
 
 - [APAC market entry: transformation program delivery](./projects/apac-market-entry-transformation-program-delivery.md) - data-platform modernization, regional governance, dependencies, and launch execution
 
-## Profile
-
-- Email: [shiv-ai-tpm@umich.edu](mailto:shiv-ai-tpm@umich.edu)
-- [LinkedIn](https://www.linkedin.com/in/beastofbayarea)
