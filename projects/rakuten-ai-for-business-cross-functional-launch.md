@@ -2,7 +2,7 @@
 
 Rakuten publicly introduced Rakuten AI for Business on November 14, 2023 as an invitation-only platform with three concepts: an Analyst to interpret data, an Agent to perform tasks, and a Librarian to retrieve and organize knowledge.
 
-During my Rakuten internship, I led the cross-functional launch system around that ambition. Product, design, engineering, data, privacy, security, legal, sales, support, enablement, and business leadership each held a necessary piece of launch authority. My job was to convert a broad platform story into one decision: **which users and workflows could enter a controlled cohort, under what constraints, and what evidence would unlock expansion?**
+During my Rakuten internship, I converted that ambition into a cross-functional launch system. Product, Design, Engineering, Data, Privacy, Security, Legal, Sales, Support, Enablement, and business leadership each retained necessary authority; I made their inputs resolve into one decision: **which users and workflows could enter a controlled cohort, under what constraints, and what evidence would unlock expansion?**
 
 ## I wrote a launch constitution, not a calendar
 
@@ -56,7 +56,7 @@ Model results carried the prompt set, retrieval snapshot, reviewer rubric, versi
 
 ## My deliverable was decision coherence
 
-I owned cohort logic, the cross-functional dependency system, readiness reviews, escalation, evidence packets, and the boundary between controlled launch and expansion. Product owned the proposition; technical and data leaders owned implementation; privacy, security, and legal retained approval; business owners defined acceptable work; support and enablement owned the human path.
+Cohort logic, dependencies, readiness reviews, escalation, evidence packets, and the launch/expansion boundary were the program elements under my control. Product set the proposition; Technical/Data built it; Privacy/Security/Legal approved it; business owners defined acceptable work; Support/Enablement operated the human path.
 
 The [August 2023 Rakuten–OpenAI memorandum](https://global.rakuten.com/corp/news/press/2023/0802_01.html) and [November 2023 invitation-only announcement](https://global.rakuten.com/corp/news/press/2023/1114_02.html) establish the contemporaneous public context. A later [April 2024 RMS AI Assistant announcement](https://global.rakuten.com/corp/news/press/2024/0430_01.html) postdates my internship and is not my outcome.
 

@@ -2,7 +2,7 @@
 
 The client was pursuing an approximately $1.1 billion APAC opportunity over two years, but country decisions depended on information that took five days to three weeks to assemble. Definitions varied, no one owned them end to end, recurring cleanup cost an estimated $250,000, and delayed or inconsistent demand signals were associated with roughly $500,000 of stockout exposure. A global/UK playbook was also misreading local buyers.
 
-At McKinsey, I led the transformation’s delivery system across regional executives, country leaders, product, marketing, analytics, data engineering, legal, compliance, finance, supply chain, local experts, and client leadership. The challenge was federation: standardize enough to allocate capital and reuse infrastructure without stripping countries of the authority to interpret their markets.
+At McKinsey, I architected the transformation’s delivery system across regional executives, country leaders, Product, Marketing, Analytics, Data Engineering, Legal, Compliance, Finance, Supply Chain, local experts, and client leadership. The challenge was federation: standardize capital and infrastructure decisions without stripping countries of market authority.
 
 ## I designed the organization before the dashboard
 
@@ -59,7 +59,7 @@ A market entered the next stage only when the packet showed:
 
 That packet let executives compare readiness without pretending every country followed an identical route.
 
-## Transformation account
+## Regional value and operating proof
 
 | Measure | Baseline → target → recorded result | Measurement |
 |---|---|---|
@@ -74,4 +74,4 @@ The conversion discrepancy remains material. I preserve both source baselines ra
 
 Later reconstructions named Redshift Spectrum and RA3 nodes, but my engagement ran July 2014–June 2016. AWS launched [Redshift Spectrum in 2017](https://aws.amazon.com/about-aws/whats-new/2017/04/introducing-amazon-redshift-spectrum-run-amazon-redshift-queries-directly-on-datasets-as-large-as-an-exabyte-in-amazon-s3/) and [RA3 in 2019](https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-redshift-announces-ra3-nodes-managed-storage/), so I exclude both. The defensible technology description is a governed ingestion, warehouse, and BI platform available during the period.
 
-I owned the connective tissue that made the transformation executable: decision rights, integrated plan, cross-workstream interfaces, metric definitions, evidence gates, local challenge, executive trade-offs, and country release. The result was a regional operating system in which markets could move at local speed while remaining comparable on capital, control, and value.
+Decision rights, the integrated plan, workstream interfaces, metric definitions, evidence gates, local challenge, executive trade-offs, and country release formed the connective tissue I controlled. Markets could then move at local speed while remaining comparable on capital, control, and value.

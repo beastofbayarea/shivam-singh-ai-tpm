@@ -4,7 +4,7 @@ The program contained two promises that had been coupled incorrectly.
 
 A sustainability claim had to be specific, current, and understandable. Payment had to complete even when optional product enrichment failed. When an external carbon-data dependency slowed under viral demand, those promises collided: waiting checkout threads exhausted the service and put the transaction itself at risk.
 
-During my AWS role, I led the cross-functional commerce program across shoppers, retail and payments teams, sustainability specialists, certifiers, platform and reliability engineers, vendors, support, finance, and executives.
+During my AWS role, I directed a commerce program that joined shopper needs, Retail, Payments, sustainability specialists, certifiers, platform/reliability engineering, vendors, Support, Finance, and executives.
 
 ## The baseline exposed both product and platform failure
 
@@ -59,6 +59,6 @@ This made trust operational: a claim could expire or disappear without affecting
 
 A post-remediation 99.999% availability reading lacks an observation window. Forty-five minutes of downtime alone would cap one-year availability near 99.9914%, so I do not present 99.999% as an annual result. A later seasonal program reportedly offset ~$3 million of commercial shortfall; offset sales are not the same as recovering each failed order.
 
-I owned the cross-team contract: which data could affect payment, incident sequencing, traffic restoration gates, customer and vendor remedies, evidence ownership, degradation behavior, and executive measurement. Sustainability specialists owned claim truth; product owned the proposition; payments engineering owned the critical path; reliability teams owned failure proof; finance kept loss, fee relief, and later sales in separate ledgers.
+The cross-team contract was mine to set: which data could touch payment, incident sequence, restoration gates, customer/vendor remedies, evidence owners, degraded behavior, and executive measures. Sustainability specialists controlled claim truth; Product controlled the proposition; Payments controlled the critical path; Reliability proved failure behavior; Finance separated loss, fee relief, and later sales.
 
 The strategic outcome was a commerce system in which differentiation could fail safely. Environmental evidence became more credible precisely because it was governed separately from the transaction it was meant to improve.

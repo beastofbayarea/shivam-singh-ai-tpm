@@ -2,7 +2,7 @@
 
 The primary path processed about 1.2 million events per minute against a stated need of 2.5 million. Resource failures and restarts were recurring, latency deteriorated during market stress, and trading teams had built shadow tools because confidence in the platform had collapsed.
 
-At D. E. Shaw, I led the 21-day recovery across traders, quantitative researchers, data/platform engineering, infrastructure, risk, controls, finance, and senior technology leadership. My job was not to make Spark jobs appear green; it was to transfer decision authority back to the primary path using evidence both traders and engineers accepted.
+At D. E. Shaw, I took command of the 21-day recovery across Trading, Quant Research, Data/Platform Engineering, Infrastructure, Risk, Controls, Finance, and technology leadership. Green Spark jobs were insufficient; authority returned only through evidence traders and engineers both accepted.
 
 ## Day zero: define who could declare recovery
 
@@ -54,6 +54,6 @@ The recovered quarter is associated with approximately $4 million of profit. Tra
 
 The source also models ~$2.5 million of annual slippage savings and ~$1.5 million of avoided downtime loss. The first needs volume, price benchmark, counterfactual, and persistence; the second needs outage probability and loss-rate assumptions. Neither is booked value, and neither is added to the $4 million.
 
-I owned promotion gates, incident cadence, protected engineering time, capacity escalation, cross-functional evidence, financial classification, and transfer to normal governance. Engineers owned implementation; traders defined the economically meaningful boundary; infrastructure owned capacity; risk/control owned exceptions; finance owned value definitions.
+Promotion gates, incident cadence, protected repair time, capacity escalation, cross-functional proof, financial classification, and the return to normal governance were my responsibilities. Engineers implemented; traders defined the economic boundary; Infrastructure supplied capacity; Risk/Controls handled exceptions; Finance defined value.
 
 The durable result was institutional, not merely technical. The firm gained a repeatable way to decide when a real-time data path deserved trust: system telemetry connected to trading consequence, integrity controls that executed rather than documented intent, explicit fault semantics, and joint authority to promote or reject the platform.

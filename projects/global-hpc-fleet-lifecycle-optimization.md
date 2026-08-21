@@ -2,7 +2,7 @@
 
 A 17-minute Tokyo disruption in 2018 exposed a gap larger than one failed component. The retained record models $7.2 million of missed arbitrage opportunity during the window, but the deeper issue was that hardware decisions lacked one view of trading need, technical health, economics, and retirement risk.
 
-At D. E. Shaw, I led the lifecycle program across traders, quantitative researchers, hardware and platform engineers, data-center and network teams, vendors, finance, procurement, risk, and disposal partners. My scope ran from demand forecast and acceptance through placement, tuning, relocation, maintenance, retirement, sanitization, and final disposition.
+At D. E. Shaw, the lifecycle program put me at the intersection of traders, quantitative researchers, hardware/platform engineering, data centers, networks, vendors, Finance, Procurement, Risk, and disposal partners. My scope ran continuously from demand forecast and acceptance to placement, tuning, relocation, maintenance, retirement, sanitization, and disposition.
 
 ## The fleet became a portfolio of decisions
 
@@ -70,6 +70,6 @@ This joined decisions normally fragmented across trading, engineering, facilitie
 
 A later source statement says the fleet absorbed a 400% workload surge in March 2020 at 99.999% availability. My D. E. Shaw tenure ended in December 2019, so I exclude it from my personal results.
 
-I owned the lifecycle decision framework, cross-region review, trade-offs, escalation, finance linkage, acceptance gates, and retirement closure. Specialists retained domain authority; business owners decided whether workloads remained necessary; finance confirmed savings.
+The framework, cross-region reviews, performance/cost trade-offs, escalations, Finance linkage, acceptance gates, and retirement closure were my program accountabilities. Specialists retained domain authority; workload owners justified continued need; Finance confirmed savings.
 
 This was capital allocation under latency and control constraints—not hardware housekeeping. It let the organization buy, tune, move, retain, or retire compute using one evidence system while protecting the market windows that made the fleet strategically valuable.

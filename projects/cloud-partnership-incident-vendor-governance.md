@@ -4,7 +4,7 @@ Twenty startups, roughly one million end users, and about $10 million in annual 
 
 A fintech estimated $500,000 lost during a two-hour event. An analytics company saw engagement fall 15%. Three provider APIs were late. Founders wanted remedies, engineers wanted stability, the provider wanted architectural time, and account leaders wanted to preserve the relationship.
 
-In Microsoft’s regulated-cloud organization, I led the recovery across startup founders, their engineers and customers, Microsoft product, support and account teams, the cloud provider, finance, procurement, legal counsel, and executives. I converted 20 different failure experiences into one prioritized recovery without erasing their distinct causes or impact.
+Inside Microsoft’s regulated-cloud organization, I assumed command of a recovery spanning startup founders, engineers/customers, Microsoft Product, Support and Accounts, the cloud provider, Finance, Procurement, Legal, and executives. Twenty different failure experiences became one priority system without losing their distinct causes or harm.
 
 ## Ledger one: restore service from the user backward
 
@@ -62,6 +62,6 @@ Every measure required a source, denominator, time window, owner, and decision.
 
 Google’s [SRE guidance on monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) informed the separation between user-facing symptoms and system causes. [BCBS operational-resilience principles](https://www.bis.org/bcbs/publ/d516.htm) were useful for challenging concentration and third-party dependency where relevant; I do not claim all 20 startups were governed by Basel requirements.
 
-I owned impact triage, evidence standards, recovery sequencing, cross-company cadence, executive escalation, the resource case, commercial-workstream coordination, and the permanent vendor scorecard. Engineers owned changes in their systems; the provider owned its platform and promises; procurement and legal owned amendments; startup leaders owned customer decisions.
+Incident authority gave me impact triage, evidence standards, sequencing, cross-company cadence, executive escalation, the resource case, commercial coordination, and the permanent scorecard. Engineers changed their systems; the provider answered for its platform/promises; Procurement and Legal executed amendments; startup leaders made customer decisions.
 
 The program’s enduring result was not a green incident status. It was a relationship in which reliability, product delivery, and commercial accountability became separately measurable—and therefore jointly governable—after the crisis team left.
