@@ -1,51 +1,73 @@
-# Recovering a Cloud Partnership After Reliability Broke Trust
+# Recovering a cloud partnership when technical trust had collapsed
 
-I led this recovery during my [Microsoft experience from January 2020 to August 2022](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+I led the recovery of a cloud partnership in Microsoft’s regulated-cloud organization. I found that the companies using the platform no longer trusted either its reliability or the promises made about it. I worked with startup founders, their engineers and customers, Microsoft product and support teams, the cloud provider, account leaders, finance, procurement, legal counsel, and executives.
 
-The cloud relationship was worth $10 million annually and supported 20 startups serving roughly one million users. It was also failing in two different ways. The services were unstable, and the vendor's reporting made it difficult to see what was actually happening. A technical repair alone would leave the same accountability gap in place; a contract negotiation alone would not restore service.
+## The commercial relationship was masking twenty different failure experiences
 
-## Two incidents made the cost concrete
+The partnership represented about $10 million in annual cloud spend across 20 startups serving roughly one million users. Those portfolio totals were useful for executive attention but dangerous for diagnosis: each company had a different architecture, demand pattern, customer promise, and exposure.
 
-Outages, delayed APIs, weak load balancing, constrained database capacity, and incomplete autoscaling had accumulated. One fintech lost $500,000 in two hours. Another portfolio company saw engagement decline 15%. Three promised APIs were late.
+The retained incident record names three immediate effects. A fintech reported an estimated $500,000 loss during a two-hour event; an analytics company saw engagement fall 15%; and three promised APIs were late. I did not aggregate those into a fictional portfolio-loss number. The financial estimate belonged to one startup, the engagement decline to another, and the delivery delay to a shared provider commitment.
 
-I treated those facts as customer and business impacts, not a collection of disconnected tickets. They gave the recovery a common priority model: immediate customer loss, regulatory dependency, data-integrity exposure, and the number of companies sharing the affected component.
+Founders wanted remedies, engineering teams wanted stable systems, the provider wanted time for architectural work, and account leaders wanted to preserve the relationship. My job was to keep those motives visible while forcing decisions from common evidence.
 
-## I established an independent evidence plane
+## I ran three ledgers, not one status report
 
-The first operating change was to stop relying on provider-authored summaries. I brought together startup reports, service logs, configurations, capacity measures, and delivery commitments to reconstruct the incident timeline. That gave engineering teams and commercial leaders the same version of events.
+### 1. Service health
 
-Google's SRE guidance shaped the monitoring discipline: I focused the shared view on signals that described user-facing behavior and required an action. Basel's operational-resilience principles shaped the wider recovery model—critical operations, impact tolerances, dependency mapping, response, and learning.
+I established an independent operating view for availability, saturation, database capacity, latency, error rate, change events, and recovery. Startup-side telemetry and provider telemetry had to reconcile at agreed boundaries; an SLA summary could not substitute for the user experience.
 
-## The recovery ran on two synchronized tracks
+The technical review found a coupled failure chain: load-balancer behavior, an under-provisioned database tier, incomplete autoscaling, weak anomaly detection, and delayed platform upgrades. I required ownership to be assigned at the right layer. Provider infrastructure, startup configuration, and jointly agreed reference architecture were separate accountabilities.
 
-On the technical track, I coordinated fixes for load balancing, autoscaling, database capacity, redundancy, anomaly detection, and the three delayed APIs. Every phase had exit evidence. I also insisted that validation represent the portfolio's real operating conditions—market spikes, flash sales, and streaming loads—rather than a convenient average-load test.
+We sequenced recovery by customer harm rather than organizational convenience:
 
-On the commercial track, I documented verified service-level breaches, dated roadmap commitments, decision owners, and remedies. I escalated the evidence to provider executives and tied the next review and renewal discussion to a jointly visible scorecard.
+- **Days 1–14:** stabilize traffic handling, database headroom, alerting, and incident communications;
+- **Weeks 3–6:** deliver the three delayed APIs and complete priority database and integration work; and
+- **Months 2–3:** establish redundant architecture, realistic load exercises, and repeatable recovery evidence.
 
-The scorecard was deliberately small. It covered availability, recovery behavior, capacity headroom, API delivery, unresolved risk, and contractual performance. Its purpose was to prompt decisions, not create another reporting ritual.
+The approved recovery package was $250,000 plus two engineers. I tied that investment to specific failure modes and exit criteria instead of describing it as general “hardening.”
 
-## How I kept 20 companies aligned
+### 2. Delivery commitments
 
-I used a concise daily update during stabilization and moved to weekly governance as risk declined. Each update separated what had happened, current customer impact, work completed, remaining uncertainty, the next decision, and its owner. Startup teams could see progress without joining every technical session, while engineers could work without repeated ad hoc escalations.
+The three late APIs moved into a commitment register containing scope, responsible technical owner, acceptance test, dependency, customer, delivery date, and escalation trigger. The provider delivered all three within 30 days.
 
-## The recovery outcome
+I used a weekly founder forum for material changes and a working-level technical cadence for evidence and blockers. Founders did not need every engineering detail; they did need to know which promise had changed, why, who owned it, and what proof would close it. Engineers needed fast decisions without turning every trade-off into a commercial negotiation.
 
-- Uptime returned to 99.9%.
-- All three delayed APIs shipped within 30 days.
-- A 15% contract concession saved $1.5 million annually.
-- Independent performance evidence replaced trust-based vendor summaries as the basis for governance.
+### 3. Commercial remedies
 
-The concession mattered, but the more durable result was a different relationship. Reliability, delivery, and commercial accountability were now managed through observable evidence.
+Service recovery and financial accountability ran in parallel. Waiting for perfect root-cause agreement would have deferred customer remedy; negotiating only credits would have left the system exposed.
 
-## What this changed in my program practice
+The provider agreed to a 15% commercial concession. Against the recorded $10 million annual relationship, that is $1.5 million per year in gross contract value. It is not the same as cash recovered, startup revenue restored, or loss avoided; the contract period, eligible spend, and realization schedule would need the executed amendment for those claims.
 
-When a partner operates part of the customer experience, vendor management is part of service design. I now establish the telemetry, impact model, escalation path, and commercial consequences before a major incident forces those conversations.
+## The point at which I would call the program recovered
 
-## External foundations
+I used a compact recovery argument rather than a single green status:
 
-These sources provided the primary operating methodology. The resume link establishes employment chronology only.
+| Claim | Before | Required state | Recorded state | Proof and caveat |
+|---|---|---|---|---|
+| The platform is stable | unstable service with a two-hour material event | monitored capacity and controlled failure behavior | 99.9% availability restored | provider/startup telemetry; observation window not retained |
+| The provider accepts a stronger obligation | existing terms did not restore confidence | measurable service commitment | 99.95% availability commitment | executed service terms; commitment is not performance |
+| Delayed product work is closed | 3 APIs late | accepted delivery | 3 delivered within 30 days | API acceptance records |
+| Recovery has resources | recurrent cross-company work competed with roadmap | funded owners | $250K and 2 engineers | approved plan and staffing record |
+| Commercial accountability exists | harm disputed across parties | negotiated remedy | 15% concession | contract amendment and realized billing |
 
-| Source | How I applied it |
-|---|---|
-| [Basel Committee — Principles for operational resilience (2021)](https://www.bis.org/bcbs/publ/d516.pdf) | I used its focus on critical operations, tolerances, dependencies, response, and learning to frame the recovery beyond infrastructure repair. |
-| [Google SRE — Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) | I used its monitoring principles to build an actionable, customer-facing evidence plane rather than accept broad provider summaries. |
+Availability percentages are meaningless without a clock. Over a 365-day period, 99.9% permits about 8 hours 46 minutes of downtime, while 99.95% permits about 4 hours 23 minutes. Because the source does not retain the recovery window, I do not present 99.9% as annual performance or imply that it satisfies the later commitment.
+
+## From rescue to vendor governance
+
+I converted the temporary recovery structure into a quarterly provider scorecard. It covered service-level performance; high-severity incidents; detection and restoration time; capacity and failover evidence; overdue product commitments; support responsiveness; recurring problem themes; commercial remedies; and founder sentiment. Every measure had a source, denominator, window, owner, and decision attached.
+
+The operating model borrowed a useful distinction from Google’s [Site Reliability Engineering guidance on monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/): symptoms such as latency and errors tell us what users experience, while causes such as resource saturation help engineers act. Both mattered, and neither replaced direct startup testimony.
+
+For regulated startups, I used operational-resilience principles to challenge concentration, recovery, and third-party dependency. I did not label the entire portfolio subject to Basel rules. [BCBS principles for operational resilience](https://www.bis.org/bcbs/publ/d516.htm) were a methodology benchmark where relevant, not a blanket legal requirement.
+
+## My leadership boundary
+
+I owned the integrated recovery: impact triage, evidence standard, sequencing, cross-company decision cadence, executive escalation, investment case, commercial workstream coordination, and permanent scorecard. Engineers owned changes in their systems. The provider owned its platform and commitments. Procurement and legal owned contract execution. Startup leaders owned customer decisions.
+
+The result was larger than an incident closure. The relationship moved from assertion and escalation to a governance system where reliability, delivery, and commercial accountability could be examined separately and acted on together. The strongest defensible outcomes are the recorded service reading, provider commitment, 30-day API delivery, approved recovery resources, and negotiated concession—with each boundary preserved.
+
+## Evidence base
+
+- The retained project record provides the relationship scale, startup impacts, failure chain, recovery sequence, investment, availability readings, API delivery, and concession.
+- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — external benchmark for user-facing symptoms, system causes, and actionable monitoring.
+- [Basel Committee: Principles for operational resilience](https://www.bis.org/bcbs/publ/d516.htm) — optional methodology benchmark for regulated financial-services participants, not asserted portfolio-wide applicability.
