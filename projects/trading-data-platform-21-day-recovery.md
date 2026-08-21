@@ -8,7 +8,7 @@ The platform had a Spark Streaming path that processed about 1.2 million events 
 
 I refused to define recovery as “the jobs are running.” The platform would regain authority only after it passed five independent gates:
 
-I owned the 21-day transfer of authority back to the primary platform: secure emergency capacity, protect engineering time, join system telemetry to trading consequence, enforce data-integrity quarantine and replay, run shadow comparison, and obtain joint trader-and-platform approval. The recovered path had to more than double throughput to 2.5 million events per minute without making a larger cluster or a single latency number the definition of trust.
+For 21 days, I controlled the transfer of authority back to the primary platform: secure emergency capacity, protect engineering time, join system telemetry to trading consequence, enforce data-integrity quarantine and replay, run shadow comparison, and obtain joint trader-and-platform approval. The recovered path had to more than double throughput to 2.5 million events per minute without making a larger cluster or a single latency number the definition of trust.
 
 1. **Scale:** sustain the required input rate with capacity headroom.
 2. **Speed:** meet the latency boundary for the decision path, with percentile and timestamp definitions fixed.

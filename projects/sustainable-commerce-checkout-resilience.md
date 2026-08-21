@@ -18,7 +18,7 @@ The initial evidence was uncomfortable:
 
 I would not allow those numbers to collapse into one success metric. Claim trust, page performance, payment completion, conversion, and commercial value each had a different owner and measurement method.
 
-I owned both halves of a high-stakes program: the evidence system behind environmental claims and the transaction architecture protecting checkout at roughly 1,600 orders per second. When the coupled design contributed to 45 minutes of failure and an estimated $3 million in lost orders, I directed containment, customer remedy, vendor recovery, critical-path isolation, regional resilience, and the release proof required to restore full traffic.
+I ran both halves of a high-stakes program: the evidence system behind environmental claims and the transaction architecture protecting checkout at roughly 1,600 orders per second. When the coupled design contributed to 45 minutes of failure and an estimated $3 million in lost orders, I directed containment, customer remedy, vendor recovery, critical-path isolation, regional resilience, and the release proof required to restore full traffic.
 
 ## How I changed the system
 

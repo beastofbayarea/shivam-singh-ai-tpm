@@ -8,7 +8,7 @@ Rakuten publicly introduced Rakuten AI for Business on November 14, 2023 as an i
 
 I converted that ambition into a decision the company could actually make: which user and workflow should enter a controlled cohort, what the product could do safely, what had to be true before expansion, and which evidence would justify the next release. My deliverable was not a launch calendar. It was a shared operating contract across teams with different incentives.
 
-I owned the launch constitution across three materially different AI products and twelve functional disciplines. I made cohort scope, data entitlement, evaluation, action authority, human review, support capacity, and expansion evidence one executive decision system—while explicitly refusing to borrow Rakuten's 70-service and 40-million-user ecosystem scale as if an invitation-only product had already reached it.
+My launch constitution spanned three materially different AI products and twelve functional disciplines. I made cohort scope, data entitlement, evaluation, action authority, human review, support capacity, and expansion evidence one executive decision system—while explicitly refusing to borrow Rakuten's 70-service and 40-million-user ecosystem scale as if an invitation-only product had already reached it.
 
 At the time of the announcement, Rakuten described a domestic ecosystem with more than 70 services and over 40 million monthly active users. I treated that as company context, not program reach. The product was invitation-only; nothing in the retained record supports claiming tens of millions of users, merchant adoption, revenue, or productivity gains from my launch work.
 
