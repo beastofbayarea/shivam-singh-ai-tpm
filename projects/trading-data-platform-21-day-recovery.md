@@ -1,105 +1,58 @@
-# Trading Data Platform - Real-Time Recovery
+# Trading Data Platform — 21-Day Real-Time Recovery
 
-## How I frame the project
+## What I worked on
 
-I developed this case study to show how I would lead the work behind **Trading Data Platform - Real-Time Recovery** from an ambiguous starting point to an evidence-based decision and an executable plan. I place it in the context of my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
+I completed this work during my [D. E. Shaw experience from July 2016 to December 2019](https://github.com/beastofbayarea/shivam-singh-ai-tpm/blob/main/shivam-singh-ai-tpm.pdf).
 
-I keep the story practical and transparent. I start with public evidence, turn that evidence into explicit choices, assign ownership, and define how I would know whether the work is creating value.
+I led a 21-day recovery of a failing real-time data platform supporting automated trading. A daily decision cadence, shared telemetry, protected engineering time, capacity changes, executable integrity checks, and shadow validation restored both system performance and stakeholder trust.
 
-## Why this problem matters to me
+## At a glance
 
-I see technical platforms fail to create durable value when architecture, service objectives, dependencies, change controls, and recovery decisions are managed separately. I therefore treat the project as an architecture, reliability, governance, and delivery challenge, not as a narrow functional exercise.
+- I recovered a Spark Streaming platform in 21 days, meeting a 2.5M-events-per-minute requirement and reaching 1.5 ms latency.
+- I raised order fill rate from 94% to 99.8% and sustained 99.99% uptime through shared telemetry, capacity remediation, and controlled cutover.
+- I captured $4M in immediate quarterly profit and an estimated $2.5M in annual slippage savings.
 
-I use [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) to ground risk-data quality, aggregation, governance, and reporting principles. I use [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) to ground distributed-log and streaming architecture.
+## The situation
 
-## What I would set out to accomplish
+Throughput stalled at 1.2M events per minute, latency exceeded two milliseconds, and recurring failures pushed traders toward shadow workflows. Trading, Engineering, and Compliance used different evidence and definitions of success.
 
-- I would identify decision-critical feeds, owners, schemas, timeliness thresholds, and reconciliation rules.
-- I would use an append-only event log and replayable consumers to isolate failures and rebuild state.
-- I would compare source, stream, and downstream positions continuously and quarantine unexplained differences.
-- I would restore in risk order with parallel validation and an explicit cutover/rollback decision.
+## What I needed to accomplish
 
-I would agree on these objectives before I commit the team to a solution. I would also record what is out of scope, which assumptions remain uncertain, and which new evidence would cause me to change direction.
+I needed to restore performance inside a fixed market window without risking capital or weakening data-integrity controls.
 
-## How I would structure the work
+## What I did
 
-### How I would approach workstream 1
+- I established a 15-minute daily war room focused on shipped work, blockers, and decisions.
+- I built live dashboards for flow, tail latency, resources, and order fill rate.
+- I secured 300% more compute capacity, protected engineering deep-work blocks, and converted compliance requirements into cryptographic batch checks.
+- I mirrored live traffic through a non-authoritative shadow stream and promoted only after throughput, latency, integrity, reliability, and audit gates passed.
 
-I would identify decision-critical feeds, owners, schemas, timeliness thresholds, and reconciliation rules. I would document the authoritative sources, definitions, freshness expectations, lineage, and exception paths before I ask anyone to act on the data. I would require a visible reconciliation view so that the team can distinguish a business movement from a measurement defect.
+## The results
 
-### How I would approach workstream 2
+- The 2.5M-events-per-minute requirement was met.
+- Latency reached 1.5 ms, order fill reached 99.8%, and uptime reached 99.99%.
+- The team hit the market window and captured $4M in quarterly profit.
+- I estimated annual slippage savings reached $2.5M.
 
-I would use an append-only event log and replayable consumers to isolate failures and rebuild state. I would define the service objective, failure modes, capacity assumptions, instrumentation, and recovery path before I scale the change. I would use canaries and controlled stress to learn where the system breaks while the blast radius is still small.
+## Decisions and trade-offs
 
-### How I would approach workstream 3
+- I replaced narrative status with one evidence plane.
+- I increased speed through faster decisions and automated proof, not compressed governance.
+- I used shadow mode to de-risk technical and organizational cutover.
 
-I would compare source, stream, and downstream positions continuously and quarantine unexplained differences. I would document the authoritative sources, definitions, freshness expectations, lineage, and exception paths before I ask anyone to act on the data. I would require a visible reconciliation view so that the team can distinguish a business movement from a measurement defect.
+## How I led
 
-### How I would approach workstream 4
+I rebuilt trust among traders, engineers, compliance, and executives by making outcome-level telemetry the shared program language.
 
-I would restore in risk order with parallel validation and an explicit cutover/rollback decision. I would use a staged plan with entry criteria, evidence-based go or no-go decisions, observability, rollback triggers, and named incident ownership. I would treat readiness as a demonstrated condition, not as a calendar date or a presentation milestone.
+## Why I chose this approach
 
-## How I would lead the people and decisions
+I used [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) to ground risk-data quality, aggregation, governance, and reporting principles. I used [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) to ground distributed-log and streaming architecture.
 
-I would run the project with a small decision-making core that includes product, engineering, architecture, security, operations, finance, support, and the business teams that depend on the service. I would agree up front on who recommends, who decides, who executes, and who must be consulted so that cross-functional collaboration does not become consensus by default.
+## Sources and external context
 
-- I would maintain a weekly working session focused on evidence, decisions, dependencies, and risks rather than broad status reporting.
-- I would use a concise decision log that records the question, options, evidence, owner, decision, date, and conditions for revisiting it.
-- I would schedule executive reviews around irreversible choices, material risk changes, and commitment gates instead of arbitrary reporting cycles.
-- I would keep user, customer, partner, or operator feedback connected to the backlog so that qualitative evidence changes delivery priorities.
+I used independent methodology and market evidence to shape the work. The resume link above is included only to establish the employment timeline.
 
-## How I would sequence delivery
-
-### How I would establish the baseline
-
-I would begin by documenting the current workflow, economics, controls, service levels, pain points, and ownership boundaries. I would separate verified facts from assumptions and make missing evidence visible before the team debates solutions.
-
-### How I would design the smallest credible intervention
-
-I would choose the smallest change that can test the central value and risk assumptions. I would define the target cohort, acceptance criteria, instrumentation, support model, and stopping conditions before I begin the pilot.
-
-### How I would pilot and learn
-
-I would release in a bounded environment, review both expected outcomes and unintended effects, and compare results with the baseline or a meaningful counterfactual. I would use the evidence to continue, revise, narrow, or stop rather than treating launch as proof of success.
-
-### How I would scale responsibly
-
-I would expand only after the operating owner, controls, documentation, support capacity, and measurement system are ready. I would preserve rollback paths and keep reviewing cohort-level outcomes so that scale does not hide deterioration.
-
-## How I would measure progress and value
-
-I would connect every measure to a decision. I would avoid a dashboard that reports activity without telling me whether to continue, intervene, or stop.
-
-| What I would measure | How I would use it |
-|---|---|
-| I would track data timeliness | I would use this to locate operational friction and decide whether process, architecture, ownership, or capacity is the limiting factor. |
-| I would track completeness | I would use this to expose evidence gaps before they turn into confident but incorrect decisions. |
-| I would track reconciliation breaks | I would use this to judge whether the output is trustworthy enough for the next stage and to identify the failure modes that need targeted work. |
-| I would track replay success | I would baseline this measure, assign an owner, review it by cohort or operating segment, and connect movement to a specific decision or corrective action. |
-| I would track recovery time | I would use this to locate operational friction and decide whether process, architecture, ownership, or capacity is the limiting factor. |
-| I would track consumer lag | I would use this to locate operational friction and decide whether process, architecture, ownership, or capacity is the limiting factor. |
-| I would track repeat incidents | I would use this to understand control effectiveness, severity, recurrence, and whether I need to stop, narrow, or redesign the rollout. |
-
-I would review leading indicators during delivery and lagging outcomes after adoption. I would also pair quantitative measures with qualitative evidence so that I can explain why a number moved and what I should do next.
-
-## What I would watch closely
-
-- I would watch for weak or selectively interpreted evidence, and I would document assumptions, counter-evidence, and the confidence level behind each material decision.
-- I would watch for hidden dependencies and unclear decision rights, and I would keep a live dependency map with an owner and escalation date for every critical path item.
-- I would watch for adoption that looks healthy in aggregate but fails for important users, markets, partners, or operating teams, and I would review outcomes by cohort.
-- I would watch for a control that exists on paper but is not observable in operation, and I would require test evidence, exception handling, and accountable approval before release.
-
-I would give every material risk an owner, an early-warning indicator, a mitigation, and a trigger for escalation or rollback. I would revisit the risk register whenever the scope, evidence, or operating environment changes.
-
-## What I would consider a strong outcome
-
-I would consider the project successful when stakeholders can explain the decision, the evidence behind it, the owner of each critical dependency, and the conditions for scaling or stopping. I would also expect the operating team to inherit a usable system: clear controls, observable performance, documented exceptions, and a measurement cadence that continues after the initial launch.
-
-## Sources I rely on
-
-I use independent methodology and market evidence to shape the analysis. I use the career link above to provide chronology.
-
-| Source I use | How I use it |
-|---|---|
-| [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) | I use this source to ground risk-data quality, aggregation, governance, and reporting principles. |
-| [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) | I use this source to ground distributed-log and streaming architecture. |
+| Source | How it informed my work | Timing |
+|---|---|---|
+| [Basel Committee - BCBS 239 (2013)](https://www.bis.org/publ/bcbs239.htm) | I used it to ground risk-data quality, aggregation, governance, and reporting principles. | — |
+| [Kreps, Narkhede and Rao - Kafka: a Distributed Messaging System for Log Processing (2011)](https://cwiki.apache.org/confluence/download/attachments/27822226/Kafka-netdb-06-2011.pdf) | I used it to ground distributed-log and streaming architecture. | — |
